@@ -1,3 +1,3 @@
-# Advanced-React
+# Shopaholic
 
-frontend
+A full stack online clothing store complete with real credit checkout
