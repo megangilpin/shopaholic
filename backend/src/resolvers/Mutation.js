@@ -1,4 +1,3 @@
-const Mutations = {
-};
+const Mutations = {};
 
 module.exports = Mutations;
