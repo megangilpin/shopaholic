@@ -35,7 +35,7 @@ class Items extends Component {
   render() {
     return (
       <Center>
-        <Pagination />
+        <Pagination page={this.props.page}/>
         <Query query={ALL_ITEMS_QUERY}>
            {({ data, error, loading }) => {
             if(loading) return <p>...Loading</p>
@@ -45,7 +45,7 @@ class Items extends Component {
             </ItemsList>
           }}
         </Query>
-        <Pagination />
+        <Pagination page={this.props.page}/>
       </Center>
     );
   }
