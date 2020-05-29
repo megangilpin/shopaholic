@@ -17,5 +17,6 @@
     "statusBar.border": "#ffc600",
     "titleBar.border": "#ffc600"
   },
-  "peacock.color": "#FFC600"
+  "peacock.color": "#FFC600",
+  "editor.accessibilityPageSize": 12
 }
