@@ -4,6 +4,7 @@ const { randomBytes } = require('crypto');
 const { promisify } = require('util');
 const { transport, makeANiceEmail } = require('../mail');
 const { hasPermission } = require('../utils');
+const stripe = require('../stripe');
 
 const Mutations = {
   async createItem(parent, args, ctx, info) {
@@ -272,6 +273,71 @@ const Mutations = {
       info
     );
   },
+  async createOrder(parent, args, ctx, info) {
+    //make sure user is signed in
+    const { userId } = ctx.request;
+    if (!userId) {
+      throw new Error('You must be signed in to complete this order.');
+    }
+    // query use and get cart info
+    const user = await ctx.db.query.user(
+      { where: { id: userId } },
+      `{
+      id
+      name
+      email
+      cart {
+        id
+        quantity
+        item { title price id description image largeImage }
+      }}`
+    );
+
+    //recalculate the total for the price - you don't want to run the risk that someone has changed the price on your client side
+    const amount = user.cart.reduce(
+      (tally, cartItem) => tally + cartItem.item.price * cartItem.quantity,
+      0
+    );
+    console.log(`Going to charge ${amount}`)
+
+    //create the stripe charge
+    const charge = await stripe.charges.create({
+      amount,
+      currency: 'USD',
+      source: args.token,
+    });
+
+    //convert the cartitems to the orderitems
+    const orderItems = user.cart.map(cartItem => {
+      const orderItem = {
+        ...cartItem.item,
+        quantity: cartItem.quantity,
+        user: { connect: { id: userId } },
+      };
+      // deleting oderItem.id because it got copied in spread operator above and we don't need it
+      delete orderItem.id;
+      return orderItem;
+    });
+
+    // create the order
+    const order = await ctx.db.mutation.createOrder({
+      data: {
+        total: charge.amount,
+        charge: charge.id,
+        items: { create: orderItems },
+        user: { connect: { id: userId } },
+      },
+    });
+    // //clear users carte, delete cartitems
+    const cartItemIds = user.cart.map(cartItem => cartItem.id);
+    await ctx.db.mutation.deleteManyCartItems({
+      where: {
+        id_in: cartItemIds,
+      },
+    });
+    // return the order to the client
+    return order;
+  }
 };
 
 
