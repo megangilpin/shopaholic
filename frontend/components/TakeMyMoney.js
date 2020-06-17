@@ -8,6 +8,7 @@ import gql from 'graphql-tag';
 import calcTotalPrice from '../lib/calcTotalPrice';
 import Error from './ErrorMessage';
 import User, { CURRENT_USER_QUERY } from './User';
+import Order from '../pages/order';
 
 const CREATE_ORDER_MUTATION = gql`
   mutation createOrder($token: String!) {
@@ -28,17 +29,22 @@ function totalItems(cart) {
 }
 
 class TakeMyMoney extends React.Component {
-  onToken = (res, createOrder) => {
+  onToken = async (res, createOrder) => {
+    NProgress.start();
     console.log('On Token Called!');
     console.log(res.id);
     // manually call the mutation once we have the stripe token
-    createOrder({
+   const order = await createOrder({
       variables: {
         token: res.id,
       },
     }).catch(err => {
       alert(err.message);
     });
+    Router.push({
+      pathname: '/order',
+      query: { id: order.data.createOrder.id },  
+     })
   };
 
   render() {
@@ -54,12 +60,13 @@ class TakeMyMoney extends React.Component {
                 amount={calcTotalPrice(me.cart)}
                 name="Sick Fits"
                 description={`Order of ${totalItems(me.cart)} items!`}
-                image={me.cart.length && me.cart[0].item && me.cart[0].item.image}
+                image={me.cart.length > 0 ? me.cart.length && me.cart[0].item && me.cart[0].item.image : "none"}
                 stripeKey="pk_test_ZhGgeblNdS34Ouo88jJGiyYp00RQNqd8tC"
                 currency="USD"
                 email={me.email}
                 token={res => this.onToken(res, createOrder)}
-              >
+                >
+                {console.log()}
                 {this.props.children}
               </StripeCheckout>
             )}
