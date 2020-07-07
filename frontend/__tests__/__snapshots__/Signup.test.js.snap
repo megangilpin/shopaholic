@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Signup/> renders and amtches snap 1`] = `
+exports[`<Signup/> renders and matches snap 1`] = `
 <form
   className="Form-sc-1xszr8q-0 krRxky"
   method="POST"
@@ -11,7 +11,7 @@ exports[`<Signup/> renders and amtches snap 1`] = `
     disabled={false}
   >
     <h2>
-      Sign up for an Account
+      Sign Up For An Account
     </h2>
     <DisplayError
       error={Object {}}

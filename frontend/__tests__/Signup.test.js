@@ -20,9 +20,8 @@ const mocks = [
     request: {
       query: SIGNUP_MUTATION,
       variables: {
+        name: me.name,
         email: me.email,
-        name: me.name,
-        name: me.name,
         password: '123pass',
       },
     },
@@ -43,7 +42,7 @@ const mocks = [
 ]
 
 describe('<Signup/>', () => {
-  it('renders and amtches snap', async () => {
+  it('renders and matches snap', async () => {
     const wrapper = mount(
     <MockedProvider>
       <Signup/>
