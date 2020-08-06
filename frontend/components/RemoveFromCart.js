@@ -14,12 +14,14 @@ const REMOVE_FROM_CART_MUTATION = gql`
 `;
 
 const BigButton = styled.button`
+  background: ${props => props.theme.offWhite};
+  color: ${props => props.theme.lightgrey};
   font-size: 3rem;
-  background: none;
   border: 0;
+  text-shadow: ${props => props.theme.lgemboss};
   &:hover {
-    color: ${props => props.theme.red};
-    cursor: pointer;
+    color: ${props => props.theme.darkGrey};
+    text-shadow: ${props => props.theme.greyemboss};
   }
 `;
 

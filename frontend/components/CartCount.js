@@ -29,14 +29,16 @@ const AnimationStyles = styled.span`
 `;
 
 const Dot = styled.div`
-  background: ${props => props.theme.red};
-  color: white;
+  background-color: ${props => props.theme.lightgrey};
   border-radius: 50%;
   padding: 0.5rem;
-  line-height: 2rem;
-  min-width: 3rem;
+  min-width: 3.5rem;
   margin-left: 1rem;
-  font-weight: 100;
+  line-height: 2.5rem;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  color: ${props => props.theme.medPurple};
+  font-size: 1em;
+  font-weight: 600;
   font-feature-settings: 'tnum';
   font-variant-numeric: tabular-nums;
 `;
@@ -52,7 +54,7 @@ const CartCount = ({ count }) => (
         key={count}
         timeout={{ enter: 4000, exit: 4000 }}
       >
-        <Dot>{count}</Dot>
+        <Dot className="cart-count">{count}</Dot>
       </CSSTransition>
     </TransitionGroup>
   </AnimationStyles>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const CartStyles = styled.div`
   padding: 20px;
   position: relative;
-  background: white;
+  background: ${props => props.theme.offWhite};
   position: fixed;
   height: 100%;
   top: 0;
@@ -19,21 +19,21 @@ const CartStyles = styled.div`
   grid-template-rows: auto 1fr auto;
   ${props => props.open && `transform: translateX(0);`};
   header {
-    border-bottom: 5px solid ${props => props.theme.black};
     margin-bottom: 2rem;
     padding-bottom: 2rem;
   }
   footer {
-    border-top: 10px double ${props => props.theme.black};
     margin-top: 2rem;
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    font-size: 3rem;
-    font-weight: 900;
     p {
+      font-size: 3rem;
+      font-weight: 500;
       margin: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
     }
   }
   ul {
@@ -41,6 +41,12 @@ const CartStyles = styled.div`
     padding: 0;
     list-style: none;
     overflow: scroll;
+  }
+  hr {
+    height: 3px;
+    border: 0;
+    background-color: ${props => props.theme.offWhite};
+    box-shadow: ${props => props.theme.lgemboss};
   }
 `;
 

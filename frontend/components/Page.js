@@ -4,18 +4,25 @@ import Header from '../components/Header'
 import Meta from '../components/Meta'
 
 const theme = {
-  red: '#FF0000',
-  black: '#393939',
-  grey: '#3A3A3A',
-  lightgrey: '#E1E1E1',
-  offWhite: '#EDEDEd',
+  red: '#99991A',
+  darkPurple: '#2F2E3D',
+  black: '#545066',
+  grey: '#726F93',
+  medPurple: '#AAA9BE',
+  lightPurple: '#C7C6D4',
+  darkGrey: '#C0BABA',
+  lightgrey: '#E3E2E9',
+  offWhite: '#F6F6F6',
   maxWidth: '1000px',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0,09)',
+  lgemboss: '-2px -2px 2px rgba(255, 255, 255), 1px 1px 2px #C0BABA',
+  greyemboss: '-1px -2px 2px rgba(255, 255, 255) , 1px 1px 2px #545066',
+  purpleEmboss: '-1px -2px 2px #E3E2E9 , 1px 1px 2px #726F93',
 };
 
 const StyledPage = styled.div`
-  background: white;
-  color: ${props => props.theme.black};
+  background:${props => props.theme.offWhite};
+  color: ${props => props.theme.darkPurple};
 `;
 
 const Inner = styled.div `
@@ -25,14 +32,10 @@ const Inner = styled.div `
 `;
 
 injectGlobal `
-  @font-face {
-    font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2')
-    format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
   html { 
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-style: normal; 
+    font-variant: normal; 
     box-sizing: border-box;
     font-size: 10px;
   }
@@ -40,18 +43,42 @@ injectGlobal `
     box-sizing: inherit;
   }
   body {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     padding:0;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 2;
-    font-family: 'radnika_next'
+  }
+  p {
+    font-size: 1.4rem; 
+    font-weight: 400;
+    color: ${theme.grey};
   }
   a {
+    font-size: 1.4rem; 
+    font-weight: 400;
     text-decoration: none;
-    color: ${theme.black};
+    color: ${theme.darkGrey};
   }
   button {
-    font-family: 'radnika_next' !important;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  h3 { 
+    color: ${theme.grey};
+  }
+  .blockquote { 
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-size: 2rem; 
+    font-weight: 500; 
+    line-height: 3rem; 
+    color: ${theme.grey};
+  }
+  .smallquote { 
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-size: 1.6rem; 
+    font-weight: 700; 
   }
 `
 

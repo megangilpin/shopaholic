@@ -15,7 +15,7 @@ const DropDownItem = styled.div`
   ${props => (props.highlighted ? 'padding-left: 2rem;' : null)};
   display: flex;
   align-items: center;
-  border-left: 10px solid ${props => (props.highlighted ? props.theme.lightgrey : 'white')};
+  // border-left: 10px solid ${props => (props.highlighted ? props.theme.lightgrey : 'white')};
   img {
     margin-right: 10px;
   }
@@ -23,17 +23,20 @@ const DropDownItem = styled.div`
 
 const glow = keyframes`
   from {
-    box-shadow: 0 0 0px yellow;
+    box-shadow: 0 0 0px #AAA9BE;
   }
 
   to {
-    box-shadow: 0 0 10px 1px yellow;
+    box-shadow: 0 0 10px 1px #AAA9BE;
   }
 `;
 
 const SearchStyles = styled.div`
   position: relative;
   input {
+    background-color: ${props => props.theme.offWhite};
+    // box-shadow: inset -6px -6px 10px white, inset
+    // 1px 1px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     padding: 10px;
     border: 0;

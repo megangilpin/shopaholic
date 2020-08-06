@@ -43,16 +43,23 @@ const Cart = () => (
               &times;
             </CloseButton>
             <Supreme>{me.name}'s Cart</Supreme>
-            <p>
-              You Have {me.cart.length} Item{me.cart.length === 1 ? '' : 's'} in your cart.
+            <p className="blockquote">
+              You have {me.cart.length} item{me.cart.length === 1 ? '' : 's'} in your cart.
             </p>
+            <hr></hr>
           </header>
           <ul>{me.cart.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)}</ul>
           <footer>
-            <p>{formatMoney(calcTotalPrice(me.cart))}</p>
-            <TakeMyMoney>
-              <SickButton>Checkout</SickButton>
-            </TakeMyMoney>
+            <hr></hr>
+            <hr></hr>
+            <div className="grid">
+              <p>{formatMoney(calcTotalPrice(me.cart))}</p>
+              <TakeMyMoney>
+                <SickButton>
+                  CHECKOUT
+                </SickButton>
+              </TakeMyMoney>
+            </div>
           </footer>
         </CartStyles>
       );
