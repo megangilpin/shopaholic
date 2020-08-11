@@ -33,6 +33,9 @@ const Logo = styled.h1`
     border-radius: 10px;
     text-transform: uppercase;
     text-decoration: none;
+    @media (max-width: 700px) {
+      font-size: 5rem;
+    }
   }
   a:hover {
     color:  ${props => props.theme.lightPurple};
@@ -63,7 +66,7 @@ const StyledHeader = styled.header`
   .sub-bar {
     display: grid;
     grid-template-columns: 1fr auto;
-    border-bottom: 1px solid ${props => props.theme.lightPurple};
+    // border-bottom: 1px solid ${props => props.theme.lightPurple};
   }
   hr.navbar {
     height: 10px;

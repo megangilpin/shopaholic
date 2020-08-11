@@ -50,7 +50,7 @@ class AutoComplete extends React.Component {
     resetIdCounter();
     return (
       <SearchStyles>
-        <Downshift onChange={routeToItem} itemToString={item => (item === null ? '' : item.title)}>
+        <Downshift onChange={routeToItem} itemToString={item => ""}>
           {({ getInputProps, getItemProps, isOpen, inputValue, highlightedIndex }) => (
             <div>
               <ApolloConsumer>

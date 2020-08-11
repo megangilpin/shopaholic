@@ -24,7 +24,6 @@ const NavStyles = styled.ul`
     border-radius: 10px;
     cursor: pointer;
     color:  ${props => props.theme.lightPurple};
-    font-weight: 600;
     box-shadow: -6px -6px 10px white,
     1px 1px 5px rgba(0, 0, 0, 0.1);
     @media (max-width: 700px) {
@@ -39,12 +38,17 @@ const NavStyles = styled.ul`
       font-weight: 300;
       font-size: 1.8em;
     }
-    &:active {
+    &:active 
+    {
+      color: ${props => props.theme.lightgrey};
+      text-shadow: ${props => props.theme.lgemboss};
+      font-weight: 300;
+      font-size: 1.5em;
       box-shadow: inset -6px -6px 10px white, inset
       1px 1px 5px rgba(0, 0, 0, 0.1);
     }
   }
-  a.active  {
+  a.active {
     color: ${props => props.theme.lightgrey};
     text-shadow: ${props => props.theme.lgemboss};
     font-weight: 300;

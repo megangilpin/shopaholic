@@ -15,7 +15,7 @@ class Item extends Component {
     return (
       <ItemStyles>
         {item.image && <img src={item.image} alt={item.title} />}
-
+        <hr></hr>
         <Title>
           <Link
             href={{
@@ -27,9 +27,11 @@ class Item extends Component {
           </Link>
         </Title>
         <PriceTag>{formatMoney(item.price)}</PriceTag>
+       
         <p>{item.description}</p>
-
+        
         <div className="buttonList">
+        
           <Link
             href={{
               pathname: 'update',
