@@ -43,20 +43,17 @@ class UpdateItem extends Component {
  
   handleChange = e => {
     const { name, type, value } = e.target;
-    const val = type === 'number' ? parseFloat(value) : value; 
-    this.setState({ [name]: e.target.value })
+    const val = type === 'number' ? parseFloat(value)*100 : value; 
+    this.setState({ [name]: val })
   };
   updateItem = async( e, updateItemMutation) => {
     e.preventDefault();
-    console.log('Updating Item!');
-    console.group(this.state);
     const res = await updateItemMutation({
       variables: {
         id: this.props.id,
         ...this.state,
       }
     })
-    console.log("Updated!")
   };
 
   render() {
@@ -90,19 +87,21 @@ class UpdateItem extends Component {
                       />
                     </label>
 
-                    <label htmlFor="title">
+                    <label htmlFor="price">
                       Price
-                      <input
-                        type="number"
-                        id="price"
-                        name="price"
+                      <input 
+                        type="number" 
+                        id="price" 
+                        name="price" 
                         placeholder="Price"
-                        required defaultValue={data.item.price}
+                        step="any"
+                        min="0" 
+                        required defaultValue={data.item.price/100}
                         onChange={this.handleChange} 
                       />
                     </label>
 
-                    <label htmlFor="title">
+                    <label htmlFor="description">
                       Description
                       <textarea
                         id="description"

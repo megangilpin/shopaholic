@@ -1576,9 +1576,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TakeMyMoney)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "onToken", function (res, createOrder) {
-      console.log('On Token Called!');
-      console.log(res.id); // manually call the mutation once we have the stripe token
-
+      // manually call the mutation once we have the stripe token
       createOrder({
         variables: {
           token: res.id
@@ -1599,7 +1597,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 40
         },
         __self: this
       }, function (_ref) {
@@ -1611,7 +1609,7 @@ function (_React$Component) {
           }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 42
           },
           __self: this
         }, function (createOrder) {
@@ -1628,7 +1626,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 49
+              lineNumber: 47
             },
             __self: this
           }, _this2.props.children);
@@ -1941,7 +1939,7 @@ __webpack_require__.r(__webpack_exports__);
 
   if (amount % 100 === 0) options.minimumFractionDigits = 0;
   var formatter = new Intl.NumberFormat('en-US', options);
-  return formatter.format(amount);
+  return formatter.format(amount / 100);
 });
 
 /***/ }),

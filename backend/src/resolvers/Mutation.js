@@ -26,7 +26,19 @@ const Mutations = {
 
     return item; 
   },
-  updateItem(parent, args, ctx, info) {
+  async updateItem(parent, args, ctx, info) {
+    const where = { id: args.id };
+    //  1. find the item
+    const item = await ctx.db.query.item({ where }, `{ id title user { id }}`);
+    // 2. check if they own that item, or have the permissions
+    const ownsItem = item.user.id === ctx.request.userId;
+    // will return true or false if the permissons array contains 'ADMIN' or 'ITEMDELETE'
+    const hasPermissions = ctx.request.user.permissions.some(permission =>
+      ['ADMIN', 'ITEMDELETE'].includes(permission)
+    );
+    if(!ownsItem && !hasPermissions) {
+      throw new Error("You don't have permission to do that!");
+    }
     // first take a cpy of the updates
     const updates = {...args};
     // remove the id from the updates
@@ -293,7 +305,7 @@ const Mutations = {
       (tally, cartItem) => tally + cartItem.item.price * cartItem.quantity,
       0
     );
-    console.log(`Going to charge for a total of ${amount}`);
+    // console.log(`Going to charge for a total of ${amount}`);
     // 3. Create the stripe charge (turn token into $$$)
     const charge = await stripe.charges.create({
       amount,

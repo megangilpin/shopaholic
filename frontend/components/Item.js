@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Title from './styles/Title';
 import ItemStyles from './styles/ItemStyles';
 import formatMoney from '../lib/formatMoney';
 import DeleteItem from './DeleteItem';
 import AddToCart from './AddToCart';
-import SickButton from './styles/SickButton';
+
 
 class Item extends Component {
   
@@ -25,7 +24,7 @@ class Item extends Component {
             <a className="card_title">{item.title}</a>
           </Link>
           <p className="card_money">{formatMoney(item.price)}</p>
-          {/* <p className="card_description">{item.description}</p> */}
+          <p className="card_description">{item.description}</p>
           
           <div className="buttonList">
           

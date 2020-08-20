@@ -17,32 +17,30 @@ const Item = styled.div`
       transition: all .15s;
     }
     .card_title {
+      margin-left: 1rem;
+      padding: 5px;
       color: ${props => props.theme.lightgrey};
-      flex-grow: 1;
-      text-align: left important!;
-      padding: 0;
       font-size: 2.8rem;
       font-weight: 400;
       letter-spacing: .5rem;
       text-shadow: -1px -1px 1px rgba(255,255,255), 1px 1px 2px #b3b3b3;
       border: 0;
-      padding: 5px;
-      cursor: pointer;
       transition: all .15s;
     }
     p {
-      line-height: 1;
+      line-height: 1.2;
+      margin: 0;
+      margin-left: 1rem;
+      padding: 0 0 5px 5px;
       color: ${props => props.theme.lightPurple};
       font-size: 1.8rem;
       font-weight: 500;
-      margin: 0;
       text-align: left;
-      padding: 5px;
       transition: all .15s;
     }
-    // p.card_description {
-    //   display: none;
-    // }
+    p.card_description {
+      display: none;
+    }
     .buttonList {
       display: grid;
       width: 100%;
@@ -65,10 +63,6 @@ const Item = styled.div`
     }
     &:hover {
       box-shadow: ${props => props.theme.boxshadow};
-      // background: ${props => props.theme.greyWhite};
-      // -webkit-transform: scale(1.03);
-      // -ms-transform: scale(1.03);
-      // transform: scale(1.03);
       img {
         -webkit-transform: scale(.9);
         -ms-transform: scale(.9);
@@ -77,33 +71,26 @@ const Item = styled.div`
       .card_title {
         color:  ${props => props.theme.darkGrey};
         text-shadow: -1px -1px 1px transparent, 1px 1px 2px transparent;
-        font-size: 3rem;
-        letter-spacing: .3rem;
-        margin-left: 1rem;
         &:hover {
-          color:  ${props => props.theme.lightgrey};
-          font-weight: 400;
-          text-shadow: -1px -1px 1px rgba(255,255,255), 1px 1px 2px #b3b3b3;
+          color:  ${props => props.theme.medPurple};
         }
         &:active {
           text-shadow: none;
           border: none;
-          color:  ${props => props.theme.grey};
-          font-weight: 400;
+          font-weight: bold;
         }
       }
       p {
-        margin-left: 1rem;
         color:  ${props => props.theme.darkGrey};
       }
       p.card_money {
         font-weight: bold;
       }
-      // p.card_description {
-      //   display: inherit;
-      //   font-size: 1.5rem;
-      //   font-weight: 500;
-      // }
+      p.card_description {
+        display: inherit;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
       .buttonList {
         visibility: visible;
         & > * {

@@ -78,7 +78,6 @@ class UserPermissions extends React.Component {
 
   handlePermissionChange = (e, updatePermissions) => {
     const checkbox = e.target;
-    console.log(e.target.value)
   // make a copy for the permission array
   let updatedPermissions = [...this.state.permissions]
   // // check if it is checked or not
@@ -89,7 +88,6 @@ class UserPermissions extends React.Component {
     }
     // use a call back to run updatePermissions in order to ensure it will run after the state is set
     this.setState({ permissions: updatedPermissions }, updatePermissions);
-    console.log(updatedPermissions)
   }
   render() {
     const user = this.props.user;
