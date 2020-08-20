@@ -20,7 +20,7 @@ const BigButton = styled.button`
   border: 0;
   text-shadow: ${props => props.theme.lgemboss};
   &:hover {
-    color: ${props => props.theme.darkGrey};
+    color: ${props => props.theme.grey};
     text-shadow: ${props => props.theme.greyemboss};
   }
 `;

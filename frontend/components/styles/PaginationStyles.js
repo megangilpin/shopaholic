@@ -10,9 +10,11 @@ const PaginationStyles = styled.div`
   margin: 7rem 0;
   border: 1px solid ${props => props.theme.lightgrey};
   border-radius: 10px;
-  color:  ${props => props.theme.lightgrey};
+  // color:  ${props => props.theme.medGrey};
   p {
-
+    font-weight: 500;
+    letter-spacing: .1rem;
+    color:  ${props => props.theme.medGrey};
   }
   & > * {
     margin: 0;
@@ -23,7 +25,11 @@ const PaginationStyles = styled.div`
     }
   }
   a[aria-disabled='true'] {
-    color: grey;
+    color:  ${props => props.theme.lightPurple};
+    pointer-events: none;
+  }
+  a[aria-disabled='false'] {
+    color:  ${props => props.theme.darkGrey};
     pointer-events: none;
   }
 `;

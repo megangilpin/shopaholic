@@ -42,6 +42,7 @@ const SearchStyles = styled.div`
     border: 0;
     font-size: 1.5rem;
     border-bottom: 1px solid ${props => props.theme.lightPurple};
+    color: ${props => props.theme.darkPurple};
     &:loading {
       animation: ${glow} 0.5s ease-in-out infinite alternate;
     }
@@ -53,7 +54,7 @@ const SearchStyles = styled.div`
       outline: none;
     }
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: ${props => props.theme.grey};
+      color: ${props => props.theme.medGrey};
       opacity: 1; /* Firefox */
     }
     @media (max-width: 1300px) {

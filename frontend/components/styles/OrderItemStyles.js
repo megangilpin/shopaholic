@@ -4,9 +4,9 @@ const OrderItemStyles = styled.li`
   box-shadow: ${props => props.theme.bs};
   list-style: none;
   padding: 2rem;
-  border: 1px solid ${props => props.theme.offWhite};
+  border: 1px solid ${props => props.theme.lightPurple};
   h2 {
-    border-bottom: 2px solid red;
+    // border-bottom: 2px solid red;
     margin-top: 0;
     margin-bottom: 2rem;
     padding-bottom: 2rem;

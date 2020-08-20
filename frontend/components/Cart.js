@@ -3,14 +3,14 @@ import { Query, Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import { adopt } from 'react-adopt';
 import User from './User';
-import CartItem from './CartItem';
-import TakeMyMoney from './TakeMyMoney';
-import calcTotalPrice from '../lib/calcTotalPrice';
-import formatMoney from '../lib/formatMoney';
 import CartStyles from './styles/CartStyles';
 import Supreme from './styles/Supreme';
 import CloseButton from './styles/CloseButton';
 import SickButton from './styles/SickButton';
+import CartItem from './CartItem';
+import calcTotalPrice from '../lib/calcTotalPrice';
+import formatMoney from '../lib/formatMoney';
+import TakeMyMoney from './TakeMyMoney';
 
 
 const LOCAL_STATE_QUERY = gql`
@@ -44,21 +44,19 @@ const Cart = () => (
             </CloseButton>
             <Supreme>{me.name}'s Cart</Supreme>
             <p className="blockquote">
-              You have {me.cart.length} item{me.cart.length === 1 ? '' : 's'} in your cart.
+              You Have {me.cart.length} Item{me.cart.length === 1 ? '' : 's'} in your cart.
             </p>
             <hr></hr>
           </header>
-          <ul>{me.cart.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)}</ul>
+            <ul>{me.cart.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)}</ul>
           <footer>
-            <hr></hr>
-            <hr></hr>
             <div className="grid">
               <p>{formatMoney(calcTotalPrice(me.cart))}</p>
-              <TakeMyMoney>
-                <SickButton>
-                  CHECKOUT
-                </SickButton>
-              </TakeMyMoney>
+                {me.cart.length > 0 && (
+                  <TakeMyMoney>
+                    <SickButton>Checkout</SickButton>
+                  </TakeMyMoney>
+                )}
             </div>
           </footer>
         </CartStyles>

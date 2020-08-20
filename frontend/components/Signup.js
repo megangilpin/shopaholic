@@ -48,7 +48,7 @@ class Signup extends Component {
                 <input
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="Email"
                   value={this.state.email}
                   onChange={this.saveToState}
                 />
@@ -58,7 +58,7 @@ class Signup extends Component {
                 <input
                   type="text"
                   name="name"
-                  placeholder="name"
+                  placeholder="Name"
                   value={this.state.name}
                   onChange={this.saveToState}
                 />
@@ -68,7 +68,7 @@ class Signup extends Component {
                 <input
                   type="password"
                   name="password"
-                  placeholder="password"
+                  placeholder="Password"
                   value={this.state.password}
                   onChange={this.saveToState}
                 />

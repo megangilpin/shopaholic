@@ -8,19 +8,49 @@ import Head from 'next/head';
 const SingleItemStyles = styled.div`
   max-width: 1200px;
   margin: 2rem auto;
-  box-shadow: ${props => props.theme.bs};
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   min-height: 800px;
   img {
+    // width: auto;
+    // height: 85vh;
+    // margin: 0 auto;
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
   .details {
-    margin: 3rem;
+    margin: 4rem 4rem;
+    line-height: 1;
+    color: ${props => props.theme.darkGrey};
+  }
+  .item_title {
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .description_title {
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-weight: 600;
     font-size: 2rem;
+    color: ${props => props.theme.darkGrey};
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .description {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: ${props => props.theme.darkPurple};
+    margin: 0;
+  }
+  hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid ${props => props.theme.lightPurple};
   }
 `;
 
@@ -55,8 +85,10 @@ class SingleItem extends Component {
               </Head>
               <img src={item.largeImage} alt={item.title} />
               <div className="details">
-                <h2>Viewing {item.title}</h2>
-                <p>{item.description}</p>
+                <h2 className="item_title">{item.title}</h2>
+                <hr></hr>
+                <p className="description_title">Details:</p>
+                <p className="description">{item.description}</p>
               </div>
             </SingleItemStyles>
           );

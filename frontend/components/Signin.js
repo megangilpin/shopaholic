@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import Form from './styles/Form';
 import Error from './ErrorMessage';
 import { CURRENT_USER_QUERY } from './User';
+import SickButton from './styles/SickButton'
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION($email: String!, $password: String!) {
@@ -48,7 +49,7 @@ class Signin extends Component {
                 <input
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="Email"
                   value={this.state.email}
                   onChange={this.saveToState}
                 />
@@ -58,7 +59,7 @@ class Signin extends Component {
                 <input
                   type="password"
                   name="password"
-                  placeholder="password"
+                  placeholder="Password"
                   value={this.state.password}
                   onChange={this.saveToState}
                 />

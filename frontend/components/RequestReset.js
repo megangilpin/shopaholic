@@ -46,7 +46,7 @@ class RequestReset extends Component {
                       <input
                         type="email"
                         name="email"
-                        placeholder="email"
+                        placeholder="Email"
                         value={this.state.email}
                         onChange={this.saveToState}
                       />

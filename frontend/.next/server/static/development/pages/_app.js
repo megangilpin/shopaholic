@@ -113,14 +113,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_adopt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-adopt */ "react-adopt");
 /* harmony import */ var react_adopt__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_adopt__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _CartItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CartItem */ "./components/CartItem.js");
-/* harmony import */ var _TakeMyMoney__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TakeMyMoney */ "./components/TakeMyMoney.js");
-/* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
-/* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
-/* harmony import */ var _styles_CartStyles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./styles/CartStyles */ "./components/styles/CartStyles.js");
-/* harmony import */ var _styles_Supreme__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./styles/Supreme */ "./components/styles/Supreme.js");
-/* harmony import */ var _styles_CloseButton__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./styles/CloseButton */ "./components/styles/CloseButton.js");
-/* harmony import */ var _styles_SickButton__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./styles/SickButton */ "./components/styles/SickButton.js");
+/* harmony import */ var _styles_CartStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/CartStyles */ "./components/styles/CartStyles.js");
+/* harmony import */ var _styles_Supreme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/Supreme */ "./components/styles/Supreme.js");
+/* harmony import */ var _styles_CloseButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/CloseButton */ "./components/styles/CloseButton.js");
+/* harmony import */ var _styles_SickButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/SickButton */ "./components/styles/SickButton.js");
+/* harmony import */ var _CartItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./CartItem */ "./components/CartItem.js");
+/* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
+/* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
+/* harmony import */ var _TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./TakeMyMoney */ "./components/TakeMyMoney.js");
 var _jsxFileName = "/Users/megangilpin/Documents/Projects/Advanced React/shopaholic/frontend/components/Cart.js";
 
 function _templateObject2() {
@@ -208,7 +208,7 @@ var Cart = function Cart() {
         localState = _ref4.localState;
     var me = user.data.me;
     if (!me) return null;
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CartStyles__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CartStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
       open: localState.data.cartOpen,
       __source: {
         fileName: _jsxFileName,
@@ -221,7 +221,7 @@ var Cart = function Cart() {
         lineNumber: 41
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CloseButton__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CloseButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
       onClick: toggleCart,
       title: "close",
       __source: {
@@ -229,7 +229,7 @@ var Cart = function Cart() {
         lineNumber: 42
       },
       __self: this
-    }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Supreme__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Supreme__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 45
@@ -242,7 +242,7 @@ var Cart = function Cart() {
         lineNumber: 46
       },
       __self: this
-    }, "You have ", me.cart.length, " item", me.cart.length === 1 ? '' : 's', " in your cart."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    }, "You Have ", me.cart.length, " Item", me.cart.length === 1 ? '' : 's', " in your cart."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 49
@@ -255,7 +255,7 @@ var Cart = function Cart() {
       },
       __self: this
     }, me.cart.map(function (cartItem) {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CartItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CartItem__WEBPACK_IMPORTED_MODULE_9__["default"], {
         key: cartItem.id,
         cartItem: cartItem,
         __source: {
@@ -270,44 +270,32 @@ var Cart = function Cart() {
         lineNumber: 52
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "grid",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 53
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 54
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "grid",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_11__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_10__["default"])(me.cart))), me.cart.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 56
       },
       __self: this
-    }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_7__["default"])(me.cart))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SickButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 57
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SickButton__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58
-      },
-      __self: this
-    }, "CHECKOUT")))));
+    }, "Checkout")))));
   });
 };
 
@@ -342,7 +330,7 @@ var AnimationStyles = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.s
 var Dot = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "CartCount__Dot",
   componentId: "xxvp4g-1"
-})(["background-color:", ";border-radius:50%;padding:0.5rem;min-width:3.5rem;margin-left:1rem;line-height:2.5rem;text-shadow:1px 1px 1px rgba(255,255,255,0.66);color:", ";font-size:1em;font-weight:600;font-feature-settings:'tnum';font-variant-numeric:tabular-nums;"], function (props) {
+})(["background-color:", ";border-radius:50%;padding:0.5rem;min-width:3rem;margin-left:1rem;line-height:2.2rem;text-shadow:1px 1px 1px rgba(255,255,255,0.66);color:", ";font-size:.9em;font-weight:600;font-feature-settings:'tnum';font-variant-numeric:tabular-nums;"], function (props) {
   return props.theme.lightgrey;
 }, function (props) {
   return props.theme.medPurple;
@@ -500,92 +488,6 @@ CartItem.propTypes = {
 
 /***/ }),
 
-/***/ "./components/ErrorMessage.js":
-/*!************************************!*\
-  !*** ./components/ErrorMessage.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/megangilpin/Documents/Projects/Advanced React/shopaholic/frontend/components/ErrorMessage.js";
-
-
-
-var ErrorStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "ErrorMessage__ErrorStyles",
-  componentId: "sc-11u5fgj-0"
-})(["padding:2rem;background:white;margin:2rem 0;border:1px solid rgba(0,0,0,0.05);border-left:5px solid red;p{margin:0;font-weight:100;}strong{margin-right:1rem;}"]);
-
-var DisplayError = function DisplayError(_ref) {
-  var error = _ref.error;
-  if (!error || !error.message) return null;
-
-  if (error.networkError && error.networkError.result && error.networkError.result.errors.length) {
-    return error.networkError.result.errors.map(function (error, i) {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ErrorStyles, {
-        key: i,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        "data-test": "graphql-error",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, "Shoot!"), error.message.replace('GraphQL error: ', '')));
-    });
-  }
-
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ErrorStyles, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    "data-test": "graphql-error",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Shoot!"), error.message.replace('GraphQL error: ', '')));
-};
-
-DisplayError.defaultProps = {
-  error: {}
-};
-DisplayError.propTypes = {
-  error: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (DisplayError);
-
-/***/ }),
-
 /***/ "./components/Header.js":
 /*!******************************!*\
   !*** ./components/Header.js ***!
@@ -633,7 +535,7 @@ next_router__WEBPACK_IMPORTED_MODULE_2___default.a.onRouteChangeError = function
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
   displayName: "Header__Logo",
   componentId: "sc-2cpreo-0"
-})(["font-size:4rem;margin-left:2rem;position:relative;z-index:2;a{padding:2rem;background:", ";color:", ";font-size:8rem;font-weight:400;letter-spacing:0.1em;text-shadow:", ";border:0;border-radius:10px;text-transform:uppercase;text-decoration:none;@media (max-width:700px){font-size:5rem;}}a:hover{color:", ";box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);}@media (max-width:1300px){margin:0;text-align:center;a{padding:0.5rem 1rem;}}"], function (props) {
+})(["font-size:4rem;margin-left:2rem;position:relative;z-index:2;a{padding:2rem;background:", ";color:", ";text-shadow:", ";font-size:7rem;font-weight:400;letter-spacing:0.1em;border:0;border-radius:10px;text-transform:uppercase;text-decoration:none;transition:all .3s;@media (max-width:700px){font-size:5rem;}}a:hover{color:", ";box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}@media (max-width:1300px){margin:0;text-align:center;a{font-size:8rem;padding:0.5rem 1rem;}}"], function (props) {
   return props.theme.offWhite;
 }, function (props) {
   return props.theme.lightgrey;
@@ -655,58 +557,58 @@ var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 84
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 86
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 87
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 88
     },
     __self: this
   }, "shopaholic"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 91
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "sub-bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 94
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 95
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 97
     },
     __self: this
   }));
@@ -757,7 +659,7 @@ var Meta = function Meta() {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
     rel: "shortcut icon",
-    href: "/static/favicon.png",
+    href: "/static/favicon2.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -983,7 +885,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  html { \n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n    font-style: normal; \n    font-variant: normal; \n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  body {\n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n    padding:0;\n    margin: 0;\n    font-size: 1.4rem;\n    line-height: 2;\n  }\n  p {\n    font-size: 1.4rem; \n    font-weight: 400;\n    color: ", ";\n  }\n  a {\n    font-size: 1.4rem; \n    font-weight: 400;\n    text-decoration: none;\n    color: ", ";\n  }\n  button {\n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n    font-weight: 700;\n    font-size: 2rem;\n  }\n  h3 { \n    color: ", ";\n  }\n  .blockquote { \n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace; \n    font-size: 2rem; \n    font-weight: 500; \n    line-height: 3rem; \n    color: ", ";\n  }\n  .smallquote { \n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace; \n    font-size: 1.6rem; \n    font-weight: 700; \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html { \n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n    font-style: normal; \n    font-variant: normal; \n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  body {\n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n    padding:0;\n    margin: 0;\n    font-size: 1.4rem;\n    line-height: 2;\n  }\n  p {\n    font-size: 1.4rem; \n    font-weight: 400;\n    color: ", ";\n  }\n  a {\n    font-size: 1.4rem; \n    font-weight: 400;\n    text-decoration: none;\n    color: ", ";\n  }\n  button {\n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n    font-weight: 700;\n    font-size: 2rem;\n    &:focus {\n      outline: none;\n    }\n  }\n  h3, h2 { \n    color: ", ";\n  }\n  .blockquote { \n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace; \n    font-size: 2rem; \n    font-weight: 500; \n    line-height: 3rem; \n    color: ", ";\n  }\n  .smallquote { \n    font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace; \n    font-size: 1.6rem; \n    font-weight: 700; \n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1000,19 +902,29 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var theme = {
   red: '#99991A',
-  darkPurple: '#2F2E3D',
-  black: '#545066',
-  grey: '#726F93',
-  medPurple: '#AAA9BE',
-  lightPurple: '#C7C6D4',
-  darkGrey: '#C0BABA',
-  lightgrey: '#E3E2E9',
+  darkPurple: '#2b1f4f',
+  purple: '#726F93',
+  medPurple: '#b6b6c8',
+  lightPurple: '#c5c5d3',
+  black: '#383749',
+  charcoal: '#545066',
+  darkGrey: '#6c6383',
+  medGrey: '#a099b2',
+  grey: '#bbb6c8',
+  lightgrey: '#e4e2e9',
+  greyWhite: '#f2f2f2',
   offWhite: '#F6F6F6',
+  // darkGrey: '#C0BABA',
+  // lightPurple: '#C7C6D4#d5d3de',
+  // lightgrey: '#E3E2E9',
+  // lightgrey: '#e1e1eb',
   maxWidth: '1000px',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0,09)',
-  lgemboss: '-2px -2px 2px rgba(255, 255, 255), 1px 1px 2px #C0BABA',
+  lgemboss: '-2px -2px 2px rgba(255, 255, 255), 1px 1px 2px #b3b3b3',
+  lgembossBig: '2px -2px 2px  rgba(255, 255, 255), 1px 2px 2px #b3b3b3',
   greyemboss: '-1px -2px 2px rgba(255, 255, 255) , 1px 1px 2px #545066',
-  purpleEmboss: '-1px -2px 2px #E3E2E9 , 1px 1px 2px #726F93'
+  purpleEmboss: '-1px -2px 2px #E3E2E9 , 1px 1px 2px #726F93',
+  boxshadow: '-6px -6px 10px white , 1px 1px 5px rgba(0, 0, 0, 0.1)'
 };
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Page__StyledPage",
@@ -1028,7 +940,7 @@ var Inner = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withCon
 })(["max-width:", ";margin:0 auto;padding:2rem;"], function (props) {
   return props.theme.maxWidth;
 });
-Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["injectGlobal"])(_templateObject(), theme.grey, theme.darkGrey, theme.grey, theme.grey);
+Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["injectGlobal"])(_templateObject(), theme.darkGrey, theme.purple, theme.purple, theme.purple);
 
 var Page =
 /*#__PURE__*/
@@ -1048,31 +960,31 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 101
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 102
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 103
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 104
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 105
         },
         __self: this
       }, this.props.children)));
@@ -1158,7 +1070,7 @@ var BigButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.
 }, function (props) {
   return props.theme.lgemboss;
 }, function (props) {
-  return props.theme.darkGrey;
+  return props.theme.grey;
 }, function (props) {
   return props.theme.greyemboss;
 });
@@ -1593,17 +1505,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "react-apollo");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nprogress */ "nprogress");
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
-/* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
-/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./User */ "./components/User.js");
 var _jsxFileName = "/Users/megangilpin/Documents/Projects/Advanced React/shopaholic/frontend/components/TakeMyMoney.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1644,11 +1549,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-
-
-
-
-var CREATE_ORDER_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_6___default()(_templateObject());
+var CREATE_ORDER_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
 
 function totalItems(cart) {
   return cart.reduce(function (tally, cartItem) {
@@ -1695,10 +1596,10 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 42
         },
         __self: this
       }, function (_ref) {
@@ -1706,16 +1607,16 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
           mutation: CREATE_ORDER_MUTATION,
           refetchQueries: [{
-            query: _User__WEBPACK_IMPORTED_MODULE_9__["CURRENT_USER_QUERY"]
+            query: _User__WEBPACK_IMPORTED_MODULE_5__["CURRENT_USER_QUERY"]
           }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 44
           },
           __self: this
         }, function (createOrder) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_1___default.a, {
-            amount: Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_7__["default"])(me.cart),
+            amount: Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_4__["default"])(me.cart),
             name: "Sick Fits",
             description: "Order of ".concat(totalItems(me.cart), " items!"),
             image: me.cart.length && me.cart[0].item && me.cart[0].item.image,
@@ -1727,7 +1628,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 53
+              lineNumber: 49
             },
             __self: this
           }, _this2.props.children);
@@ -1767,7 +1668,7 @@ var _jsxFileName = "/Users/megangilpin/Documents/Projects/Advanced React/shopaho
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  query {\n    me{\n      id\n      email\n      name\n      permissions\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          image\n          title\n          description\n        }\n      }\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  query {\n    me {\n      id\n      email\n      name\n      permissions\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          image\n          title\n          description\n        }\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1854,7 +1755,7 @@ var CloseButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.butto
 }, function (props) {
   return props.theme.lgemboss;
 }, function (props) {
-  return props.theme.darkGrey;
+  return props.theme.grey;
 }, function (props) {
   return props.theme.greyemboss;
 });
@@ -1897,12 +1798,14 @@ var glow = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])([
 var SearchStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "DropDown__SearchStyles",
   componentId: "n5d97g-2"
-})(["position:relative;margin:3rem 0;input{font-family:\"Courier New\",Courier,\"Lucida Sans Typewriter\",\"Lucida Typewriter\",monospace;background-color:", ";width:35%;padding:10px;border:0;font-size:1.5rem;border-bottom:1px solid ", ";&:loading{animation:", " 0.5s ease-in-out infinite alternate;}&:focus{width:100%;border-bottom:none;box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);outline:none;}::placeholder{color:", ";opacity:1;}@media (max-width:1300px){width:45%;}}input[type=\"search\"]::-webkit-search-cancel-button{-webkit-appearance:none;}"], function (props) {
+})(["position:relative;margin:3rem 0;input{font-family:\"Courier New\",Courier,\"Lucida Sans Typewriter\",\"Lucida Typewriter\",monospace;background-color:", ";width:35%;padding:10px;border:0;font-size:1.5rem;border-bottom:1px solid ", ";color:", ";&:loading{animation:", " 0.5s ease-in-out infinite alternate;}&:focus{width:100%;border-bottom:none;box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);outline:none;}::placeholder{color:", ";opacity:1;}@media (max-width:1300px){width:45%;}}input[type=\"search\"]::-webkit-search-cancel-button{-webkit-appearance:none;}"], function (props) {
   return props.theme.offWhite;
 }, function (props) {
   return props.theme.lightPurple;
+}, function (props) {
+  return props.theme.darkPurple;
 }, glow, function (props) {
-  return props.theme.grey;
+  return props.theme.medGrey;
 });
 
 
@@ -1923,20 +1826,8 @@ __webpack_require__.r(__webpack_exports__);
 var NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul.withConfig({
   displayName: "NavStyles",
   componentId: "sc-11c0d2g-0"
-})(["margin:0;padding:0;font-size:2rem;display:flex;justify-self:end;align-items:center;transition:all .3s;a,button{height:7rem;display:flex;align-items:center;margin:1rem;padding:1.7rem 2rem;text-transform:uppercase;letter-spacing:.2rem;font-weight:600;font-size:1em;background:none;border:0;border-radius:10px;cursor:pointer;color:", ";box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);@media (max-width:700px){font-size:12px;padding:0 10px;}&:hover{color:", ";text-shadow:", ";outline:none;box-shadow:none;font-weight:300;font-size:1.8em;}&:active{color:", ";text-shadow:", ";font-weight:300;font-size:1.5em;box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}}a.active{color:", ";text-shadow:", ";font-weight:300;font-size:1.5em;box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}@media (max-width:1300px){width:100%;justify-content:center;font-size:1.5rem;}"], function (props) {
-  return props.theme.lightPurple;
-}, function (props) {
-  return props.theme.lightgrey;
-}, function (props) {
-  return props.theme.lgemboss;
-}, function (props) {
-  return props.theme.lightgrey;
-}, function (props) {
-  return props.theme.lgemboss;
-}, function (props) {
-  return props.theme.lightgrey;
-}, function (props) {
-  return props.theme.lgemboss;
+})(["margin:0;padding:0;font-size:2rem;display:flex;justify-self:end;align-items:center;a,button{height:7rem;display:flex;align-items:center;margin:1rem;padding:1.7rem 2rem;text-transform:uppercase;letter-spacing:.2rem;font-weight:600;font-size:.9em;background:none;border:0;border-radius:10px;cursor:pointer;color:", ";transition:all .3s;@media (max-width:700px){font-size:12px;padding:0 10px;}&:hover{box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);.cart-count{font-size:2.5rem;}}&:active{border:none;box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}}a.active{box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}@media (max-width:1300px){width:100%;justify-content:center;}"], function (props) {
+  return props.theme.grey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (NavStyles);
 
@@ -1957,16 +1848,14 @@ __webpack_require__.r(__webpack_exports__);
 var SickButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "SickButton",
   componentId: "l04z44-0"
-})(["background:", ";color:", ";font-size:3rem;font-weight:400;letter-spacing:.5rem;text-shadow:", ";border:0;border-radius:10px;padding:5px;&:hover{color:", ";text-shadow:", ";box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);}"], function (props) {
+})(["background:", ";border:0;border-radius:10px;padding:1.7rem 2rem;color:", ";text-shadow:", ";font-size:3.5rem;font-weight:400;letter-spacing:.3rem;cursor:pointer;transition:all .4s;&:hover{color:", ";box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);}"], function (props) {
   return props.theme.offWhite;
 }, function (props) {
   return props.theme.lightgrey;
 }, function (props) {
   return props.theme.lgemboss;
 }, function (props) {
-  return props.theme.darkGrey;
-}, function (props) {
-  return props.theme.greyemboss;
+  return props.theme.lightPurple;
 });
 /* harmony default export */ __webpack_exports__["default"] = (SickButton);
 
@@ -1988,9 +1877,9 @@ var Supreme = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h2.withCo
   displayName: "Supreme",
   componentId: "xv30qb-0"
 })(["display:inline-block;margin:0;text-transform:uppercase;font-size:5rem;font-weight:500;letter-spacing:0.1em;color:", ";text-shadow:", ";"], function (props) {
-  return props.theme.darkGrey;
+  return props.theme.lightgrey;
 }, function (props) {
-  return props.theme.purpleEmboss;
+  return props.theme.lgemboss;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Supreme);
 
@@ -2052,7 +1941,7 @@ __webpack_require__.r(__webpack_exports__);
 
   if (amount % 100 === 0) options.minimumFractionDigits = 0;
   var formatter = new Intl.NumberFormat('en-US', options);
-  return formatter.format(amount / 100);
+  return formatter.format(amount);
 });
 
 /***/ }),

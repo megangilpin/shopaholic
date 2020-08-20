@@ -25,14 +25,15 @@ const Logo = styled.h1`
     padding: 2rem;
     background: ${props => props.theme.offWhite};
     color: ${props => props.theme.lightgrey};
-    font-size: 8rem;
+    text-shadow: ${props => props.theme.lgemboss};
+    font-size: 7rem;
     font-weight: 400;
     letter-spacing: 0.1em;
-    text-shadow: ${props => props.theme.lgemboss};
     border: 0;
     border-radius: 10px;
     text-transform: uppercase;
     text-decoration: none;
+    transition: all .3s;
     @media (max-width: 700px) {
       font-size: 5rem;
     }
@@ -41,11 +42,15 @@ const Logo = styled.h1`
     color:  ${props => props.theme.lightPurple};
     box-shadow: -6px -6px 10px white,
     1px 1px 5px rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
   @media (max-width: 1300px) {
     margin: 0;
     text-align: center;
     a {
+      font-size: 8rem;
       padding: 0.5rem 1rem;
     }
   }

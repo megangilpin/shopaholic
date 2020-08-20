@@ -10,7 +10,7 @@ const CloseButton = styled.button`
   right: 0;
   text-shadow: ${props => props.theme.lgemboss};
   &:hover {
-    color: ${props => props.theme.darkGrey};
+    color: ${props => props.theme.grey};
     text-shadow: ${props => props.theme.greyemboss};
   }
 `;
