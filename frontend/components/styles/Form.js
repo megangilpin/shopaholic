@@ -107,7 +107,7 @@ const Form = styled.form`
       height: 5px;
       content: '';
       display: block;
-      // background-image: linear-gradient(to right, #2b1f4f 0%, #726F93 25%, #b6b6c8 50%, #726F93 75%, #2b1f4f 100%);
+      background-image: linear-gradient(to right, transparent 0%, #bbb6c8 50%, transparent 100%);
       background-color: ${props => props.theme.lightgrey};
       box-shadow: ${props => props.theme.lgemboss};
       margin-bottom: 2rem;

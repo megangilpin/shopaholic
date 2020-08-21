@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -162,6 +162,8 @@ function (_React$Component) {
   _createClass(AddToCart, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       var id = this.props.id;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Mutation"], {
         mutation: ADD_TO_CART_MUTATION,
@@ -182,6 +184,10 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           disabled: loading,
           onClick: function onClick() {
+            if (!_this.props.me) {
+              return alert("Please sign in to continue shopping");
+            }
+
             addToCart().catch(function (err) {
               alert(err.message);
             });
@@ -318,6 +324,10 @@ function (_Component) {
         var error = _ref.error;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
+            if (!_this2.props.me) {
+              return alert("Please sign in to delete an item.");
+            }
+
             if (confirm('Are you sure you want to delete this item?')) {
               deleteItem().catch(function (err) {
                 alert(err.message);
@@ -360,6 +370,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
 /* harmony import */ var _DeleteItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DeleteItem */ "./components/DeleteItem.js");
 /* harmony import */ var _AddToCart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddToCart */ "./components/AddToCart.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var _styles_PopUpStyle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/PopUpStyle */ "./components/styles/PopUpStyle.js");
 var _jsxFileName = "/Users/megangilpin/Documents/Projects/Advanced React/shopaholic/frontend/components/Item.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -388,6 +400,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var Item =
 /*#__PURE__*/
 function (_Component) {
@@ -403,100 +417,161 @@ function (_Component) {
     key: "render",
     value: function render() {
       var item = this.props.item;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ItemStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 16
         },
         __self: this
-      }, item.image && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: item.image,
-        alt: item.title,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        href: {
-          pathname: '/item',
-          query: {
-            id: item.id
-          }
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "card_title",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      }, item.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "card_money",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_4__["default"])(item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "card_description",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, item.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "buttonList",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        href: {
-          pathname: 'update',
-          query: {
-            id: item.id
-          }
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }, "Edit \u270F\uFE0F")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddToCart__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        id: item.id,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DeleteItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        id: item.id,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }, "Delete Item"))));
+      }, function (_ref) {
+        var data = _ref.data;
+        var me = data ? data.me : null;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ItemStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          },
+          __self: this
+        }, item.image && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: item.image,
+          alt: item.title,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          href: {
+            pathname: '/item',
+            query: {
+              id: item.id
+            }
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          className: "card_title",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+          },
+          __self: this
+        }, item.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "card_money",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          },
+          __self: this
+        }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_4__["default"])(item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "card_description",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32
+          },
+          __self: this
+        }, item.description), !me ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "buttonList",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_PopUpStyle__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+            className: "button",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 36
+            },
+            __self: this
+          }, "Add To Cart \uD83D\uDED2"),
+          modal: true,
+          closeOnDocumentClick: true,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          },
+          __self: this
+        }, " \uD83D\uDCB8 Please sign in to buy or sell \uD83D\uDCB8 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          href: "/signup",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          className: "signup",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          },
+          __self: this
+        }, "Sign In")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "buttonList",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          href: {
+            pathname: 'update',
+            query: {
+              id: item.id
+            }
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
+          },
+          __self: this
+        }, "Edit \u270F\uFE0F")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddToCart__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          id: item.id,
+          me: me,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DeleteItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          id: item.id,
+          me: me,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58
+          },
+          __self: this
+        }, "Delete Item"))));
+      });
     }
   }]);
 
@@ -905,10 +980,12 @@ __webpack_require__.r(__webpack_exports__);
 var Item = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "ItemStyles__Item",
   componentId: "sc-16pk14u-0"
-})(["position:relative;display:flex;flex-direction:column;text-align:left;.card{border-radius:10px;transition:all .15s;overflow:hidden;line-height:1.5;img{width:100%;height:400px;object-fit:cover;transition:all .15s;}.card_title{margin-left:1rem;padding:5px;color:", ";font-size:2.8rem;font-weight:400;letter-spacing:.5rem;text-shadow:-1px -1px 1px rgba(255,255,255),1px 1px 2px #b3b3b3;border:0;transition:all .15s;}p{line-height:1.2;margin:0;margin-left:1rem;padding:0 0 5px 5px;color:", ";font-size:1.8rem;font-weight:500;text-align:left;transition:all .15s;}p.card_description{display:none;}.buttonList{display:grid;width:100%;border-top:1px solid ", ";grid-template-columns:repeat(auto-fit,minmax(100px,1fr));grid-gap:1px;background:", ";text-align:center;margin-top:5px;visibility:hidden;& > *{background:", ";border:0;color:", ";font-size:1.2rem;font-weight:700;padding:1.5rem;line-height:1.5;}}&:hover{box-shadow:", ";img{-webkit-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9);}.card_title{color:", ";text-shadow:-1px -1px 1px transparent,1px 1px 2px transparent;&:hover{color:", ";}&:active{text-shadow:none;border:none;font-weight:bold;}}p{color:", ";}p.card_money{font-weight:bold;}p.card_description{display:inherit;font-size:1.5rem;font-weight:500;}.buttonList{visibility:visible;& > *{&:hover{color:", ";cursor:pointer;}}}}}"], function (props) {
+})(["position:relative;display:flex;flex-direction:column;text-align:left;.card{border-radius:10px;transition:all .15s;overflow:hidden;line-height:1.5;img{width:100%;height:400px;object-fit:cover;transition:all .15s;}.card_title{margin-left:1rem;padding:5px;color:", ";font-size:2.8rem;font-weight:400;letter-spacing:.5rem;text-shadow:-1px -1px 1px rgba(255,255,255),1px 1px 2px #b3b3b3;border:0;transition:all .15s;}p{line-height:1.2;margin:0;margin-left:1rem;padding:0 0 5px 5px;color:", ";font-size:1.8rem;font-weight:500;text-align:left;transition:all .15s;}p.text{color:", ";margin:3rem;}p.card_description{display:none;}.buttonList{display:grid;width:100%;border-top:1px solid ", ";grid-template-columns:repeat(auto-fit,minmax(100px,1fr));grid-gap:1px;background:", ";text-align:center;margin-top:5px;visibility:hidden;& > *{background:", ";border:0;color:", ";font-size:1.2rem;font-weight:700;padding:1.5rem;line-height:1.5;}}.signup{display:inline-block;margin-bottom:3rem;background:", ";box-shadow:", ";color:", ";font-size:2rem;font-weight:600;border:0;border-radius:10px;padding:1.7rem 2rem;text-transform:uppercase;letter-spacing:.2rem;transition:all .3s;&:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);box-shadow:none;background:none;color:", ";text-shadow:", ";font-weight:400;}&:focus{text-shadow:none;outline:none;color:", ";font-weight:600;}}&:hover{box-shadow:", ";img{-webkit-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9);}.card_title{color:", ";text-shadow:-1px -1px 1px transparent,1px 1px 2px transparent;&:hover{color:", ";}&:active{text-shadow:none;border:none;font-weight:bold;}}p{color:", ";}p.card_money{font-weight:bold;}p.card_description{display:inherit;font-size:1.5rem;font-weight:500;}.buttonList{visibility:visible;& > *{&:hover{color:", ";cursor:pointer;}}}}}"], function (props) {
   return props.theme.lightgrey;
 }, function (props) {
   return props.theme.lightPurple;
+}, function (props) {
+  return props.theme.offWhite;
 }, function (props) {
   return props.theme.lightgrey;
 }, function (props) {
@@ -917,6 +994,18 @@ var Item = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConf
   return props.theme.offWhite;
 }, function (props) {
   return props.theme.darkGrey;
+}, function (props) {
+  return props.theme.lightgrey;
+}, function (props) {
+  return props.theme.lgemboss;
+}, function (props) {
+  return props.theme.purple;
+}, function (props) {
+  return props.theme.lightgrey;
+}, function (props) {
+  return props.theme.lgemboss;
+}, function (props) {
+  return props.theme.grey;
 }, function (props) {
   return props.theme.boxshadow;
 }, function (props) {
@@ -959,6 +1048,33 @@ var PaginationStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
   return props.theme.darkGrey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (PaginationStyles);
+
+/***/ }),
+
+/***/ "./components/styles/PopUpStyle.js":
+/*!*****************************************!*\
+  !*** ./components/styles/PopUpStyle.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactjs-popup */ "reactjs-popup");
+/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactjs_popup__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var StyledPopup = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(reactjs_popup__WEBPACK_IMPORTED_MODULE_1___default.a).withConfig({
+  displayName: "PopUpStyle__StyledPopup",
+  componentId: "sc-14h72ar-0"
+})(["&-content{background:red;border-radius:10px;box-shadow:0 0 10px 3px rgba(0,0,0,0.2);hr{margin:3rem;height:3px;border:0;background-color:", ";box-shadow:", ";}}"], function (props) {
+  return props.theme.offWhite;
+}, function (props) {
+  return props.theme.lgemboss;
+});
+/* harmony default export */ __webpack_exports__["default"] = (StyledPopup);
 
 /***/ }),
 
@@ -1056,7 +1172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/items.js ***!
   \******************************/
@@ -1131,6 +1247,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-apollo");
+
+/***/ }),
+
+/***/ "reactjs-popup":
+/*!********************************!*\
+  !*** external "reactjs-popup" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("reactjs-popup");
 
 /***/ }),
 

@@ -38,6 +38,10 @@ const Item = styled.div`
       text-align: left;
       transition: all .15s;
     }
+    p.text {
+      color: ${props => props.theme.offWhite};
+      margin: 3rem;
+    }
     p.card_description {
       display: none;
     }
@@ -59,6 +63,37 @@ const Item = styled.div`
         font-weight: 700;
         padding: 1.5rem;
         line-height: 1.5;
+      }
+    }
+    .signup {
+      display: inline-block;
+      margin-bottom: 3rem;
+      background: ${props => props.theme.lightgrey};
+      box-shadow: ${props => props.theme.lgemboss};
+      color: ${props => props.theme.purple};
+      font-size: 2rem;
+      font-weight: 600;
+      border: 0;
+      border-radius: 10px;
+      padding: 1.7rem 2rem;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      transition: all .3s;
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        box-shadow: none;
+        background: none;
+        color: ${props => props.theme.lightgrey};
+        text-shadow: ${props => props.theme.lgemboss};
+        font-weight: 400;
+      }
+      &:focus {
+        text-shadow: none;
+        outline: none;
+        color:  ${props => props.theme.grey};
+        font-weight: 600;
       }
     }
     &:hover {
