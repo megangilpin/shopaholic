@@ -2,7 +2,7 @@
 
 exports[`<Pagination/> renders pagination for 18 items 1`] = `
 <div
-  className="PaginationStyles-aduuar-0 ewJsCc"
+  className="PaginationStyles-aduuar-0 kYFMi"
   data-test="pagination"
 >
   <SideEffect(Head)>
@@ -25,13 +25,13 @@ exports[`<Pagination/> renders pagination for 18 items 1`] = `
       href="items?page=0"
       onClick={[Function]}
     >
-      Prev
+      PREV
     </a>
   </Link>
   <p>
-    Page 
+    PAGE 
     1
-     of
+     OF 
     <span
       className="totalPages"
     >
@@ -40,7 +40,7 @@ exports[`<Pagination/> renders pagination for 18 items 1`] = `
   </p>
   <p>
     18
-     Items Total
+     ITEMS TOTAL
   </p>
   <Link
     href={
@@ -59,7 +59,7 @@ exports[`<Pagination/> renders pagination for 18 items 1`] = `
       href="items?page=2"
       onClick={[Function]}
     >
-      Next
+      NEXT
     </a>
   </Link>
 </div>

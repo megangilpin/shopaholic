@@ -1,7 +1,9 @@
+  
 import { mount } from 'enzyme';
 import wait from 'waait';
 import toJSON from 'enzyme-to-json';
 import Nav from '../components/Nav';
+import { withRouter } from 'next/router'
 import { CURRENT_USER_QUERY } from '../components/User';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { fakeUser, fakeCartItem } from '../lib/testUtils';
@@ -43,6 +45,7 @@ describe('<Nav/>', () => {
     );
     await wait();
     wrapper.update();
+    // console.log(wrapper.debug());
     const nav = wrapper.find('ul[data-test="nav"]');
     expect(toJSON(nav)).toMatchSnapshot();
   });

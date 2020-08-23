@@ -2,7 +2,7 @@
 
 exports[`<Signup/> renders and matches snap 1`] = `
 <form
-  className="Form-sc-1xszr8q-0 krRxky"
+  className="Form-sc-1xszr8q-0 fWdWvy"
   method="POST"
   onSubmit={[Function]}
 >
@@ -23,7 +23,7 @@ exports[`<Signup/> renders and matches snap 1`] = `
       <input
         name="email"
         onChange={[Function]}
-        placeholder="email"
+        placeholder="Email"
         type="email"
         value=""
       />
@@ -35,7 +35,7 @@ exports[`<Signup/> renders and matches snap 1`] = `
       <input
         name="name"
         onChange={[Function]}
-        placeholder="name"
+        placeholder="Name"
         type="text"
         value=""
       />
@@ -47,7 +47,7 @@ exports[`<Signup/> renders and matches snap 1`] = `
       <input
         name="password"
         onChange={[Function]}
-        placeholder="password"
+        placeholder="Password"
         type="password"
         value=""
       />

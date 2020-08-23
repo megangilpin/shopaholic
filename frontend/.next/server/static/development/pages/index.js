@@ -162,8 +162,6 @@ function (_React$Component) {
   _createClass(AddToCart, [{
     key: "render",
     value: function render() {
-      var _this = this;
-
       var id = this.props.id;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Mutation"], {
         mutation: ADD_TO_CART_MUTATION,
@@ -184,10 +182,6 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           disabled: loading,
           onClick: function onClick() {
-            if (!_this.props.me) {
-              return alert("Please sign in to continue shopping");
-            }
-
             addToCart().catch(function (err) {
               alert(err.message);
             });
@@ -366,12 +360,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "next/link");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_ItemStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/ItemStyles */ "./components/styles/ItemStyles.js");
-/* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
-/* harmony import */ var _DeleteItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DeleteItem */ "./components/DeleteItem.js");
-/* harmony import */ var _AddToCart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddToCart */ "./components/AddToCart.js");
-/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./User */ "./components/User.js");
-/* harmony import */ var _styles_PopUpStyle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/PopUpStyle */ "./components/styles/PopUpStyle.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_ItemStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/ItemStyles */ "./components/styles/ItemStyles.js");
+/* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
+/* harmony import */ var _DeleteItem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DeleteItem */ "./components/DeleteItem.js");
+/* harmony import */ var _AddToCart__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AddToCart */ "./components/AddToCart.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! reactjs-popup */ "reactjs-popup");
+/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(reactjs_popup__WEBPACK_IMPORTED_MODULE_9__);
 var _jsxFileName = "/Users/megangilpin/Documents/Projects/Advanced React/shopaholic/frontend/components/Item.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -402,6 +399,15 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+var StyledPopup = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(reactjs_popup__WEBPACK_IMPORTED_MODULE_9___default.a).withConfig({
+  displayName: "Item__StyledPopup",
+  componentId: "sc-1uwv2aj-0"
+})(["&-content{border-radius:10px;box-shadow:0 0 10px 3px rgba(0,0,0,0.2);hr{margin:3rem;height:3px;border:0;background-color:", ";box-shadow:", ";}}"], function (props) {
+  return props.theme.offWhite;
+}, function (props) {
+  return props.theme.lgemboss;
+});
+
 var Item =
 /*#__PURE__*/
 function (_Component) {
@@ -417,26 +423,26 @@ function (_Component) {
     key: "render",
     value: function render() {
       var item = this.props.item;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 31
         },
         __self: this
       }, function (_ref) {
         var data = _ref.data;
         var me = data ? data.me : null;
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ItemStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ItemStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 35
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "card",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 36
           },
           __self: this
         }, item.image && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -444,7 +450,7 @@ function (_Component) {
           alt: item.title,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 37
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -456,84 +462,90 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 38
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           className: "card_title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 44
           },
           __self: this
         }, item.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "card_money",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 46
           },
           __self: this
-        }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_4__["default"])(item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_5__["default"])(item.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "card_description",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 47
           },
           __self: this
         }, item.description), !me ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "buttonList",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 49
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_PopUpStyle__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPopup, {
           trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             className: "button",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 36
+              lineNumber: 51
             },
             __self: this
-          }, "Add To Cart \uD83D\uDED2"),
+          }, " Add To Cart \uD83D\uDED2 "),
           modal: true,
           closeOnDocumentClick: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 50
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 56
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 57
           },
           __self: this
         }, " \uD83D\uDCB8 Please sign in to buy or sell \uD83D\uDCB8 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
           href: "/signup",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 58
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           className: "signup",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 59
           },
           __self: this
-        }, "Sign In")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, "Sign In"))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "buttonList",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 65
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -545,29 +557,29 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49
+            lineNumber: 66
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 72
           },
           __self: this
-        }, "Edit \u270F\uFE0F")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddToCart__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        }, "Edit \u270F\uFE0F")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddToCart__WEBPACK_IMPORTED_MODULE_7__["default"], {
           id: item.id,
           me: me,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 74
           },
           __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DeleteItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DeleteItem__WEBPACK_IMPORTED_MODULE_6__["default"], {
           id: item.id,
           me: me,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 75
           },
           __self: this
         }, "Delete Item"))));
@@ -811,7 +823,7 @@ var Pagination = function Pagination(props) {
         lineNumber: 21
       },
       __self: this
-    }, "LOADING ...");
+    }, "Loading ...");
     var count = data.itemsConnection.aggregate.count;
     var pages = Math.ceil(count / _config__WEBPACK_IMPORTED_MODULE_6__["perPage"]);
     var page = props.page;
@@ -868,7 +880,7 @@ var Pagination = function Pagination(props) {
         lineNumber: 41
       },
       __self: this
-    }, " ", pages)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, pages)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 43
@@ -1048,33 +1060,6 @@ var PaginationStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
   return props.theme.darkGrey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (PaginationStyles);
-
-/***/ }),
-
-/***/ "./components/styles/PopUpStyle.js":
-/*!*****************************************!*\
-  !*** ./components/styles/PopUpStyle.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactjs-popup */ "reactjs-popup");
-/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactjs_popup__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var StyledPopup = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(reactjs_popup__WEBPACK_IMPORTED_MODULE_1___default.a).withConfig({
-  displayName: "PopUpStyle__StyledPopup",
-  componentId: "sc-14h72ar-0"
-})(["&-content{background:red;border-radius:10px;box-shadow:0 0 10px 3px rgba(0,0,0,0.2);hr{margin:3rem;height:3px;border:0;background-color:", ";box-shadow:", ";}}"], function (props) {
-  return props.theme.offWhite;
-}, function (props) {
-  return props.theme.lgemboss;
-});
-/* harmony default export */ __webpack_exports__["default"] = (StyledPopup);
 
 /***/ }),
 

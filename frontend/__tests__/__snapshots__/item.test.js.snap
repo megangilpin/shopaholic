@@ -1,58 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Item/> renders and matches the snapshot 1`] = `
-<ItemStyles__Item>
-  <img
-    alt="T-shirt"
-    src="dog.jpg"
-  />
-  <Title>
-    <Link
-      href={
-        Object {
-          "pathname": "/item",
-          "query": Object {
-            "id": "ABC123",
-          },
-        }
-      }
-    >
-      <a>
-        T-shirt
-      </a>
-    </Link>
-  </Title>
-  <PriceTag>
-    $40
-  </PriceTag>
-  <p>
-    Tye Dye Tshirt
-  </p>
-  <div
-    className="buttonList"
+Array [
+  <button
+    onClick={[Function]}
   >
-    <Link
-      href={
-        Object {
-          "pathname": "update",
-          "query": Object {
-            "id": "ABC123",
-          },
-        }
-      }
-    >
-      <a>
-        Edit ✏️
-      </a>
-    </Link>
-    <AddToCart
-      id="ABC123"
-    />
-    <DeleteItem
-      id="ABC123"
-    >
-      Delete this Item
-    </DeleteItem>
-  </div>
-</ItemStyles__Item>
+    Edit ✏️
+  </button>,
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Add
+     To Cart 🛒
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    Delete Item
+  </button>,
+]
 `;

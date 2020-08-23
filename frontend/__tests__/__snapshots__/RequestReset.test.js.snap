@@ -2,7 +2,7 @@
 
 exports[`<RequestRest/> renders and matches snapshot 1`] = `
 <form
-  className="Form-sc-1xszr8q-0 krRxky"
+  className="Form-sc-1xszr8q-0 fWdWvy"
   data-test="form"
   method="POST"
   onSubmit={[Function]}
@@ -24,7 +24,7 @@ exports[`<RequestRest/> renders and matches snapshot 1`] = `
       <input
         name="email"
         onChange={[Function]}
-        placeholder="email"
+        placeholder="Email"
         type="email"
         value=""
       />

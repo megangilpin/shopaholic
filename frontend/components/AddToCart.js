@@ -25,9 +25,6 @@ class AddToCart extends React.Component {
       >
         {(addToCart, { loading, error }) => (
           <button disabled={loading} onClick={() => {
-            if(!this.props.me){
-              return alert("Please sign in to continue shopping")
-            }
             addToCart().catch(err => {
               alert(err.message);
             })

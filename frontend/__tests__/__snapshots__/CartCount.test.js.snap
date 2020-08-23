@@ -18,7 +18,9 @@ exports[`<CartCount/> matches the snapshot 1`] = `
       }
       unmountOnExit={true}
     >
-      <CartCount__Dot>
+      <CartCount__Dot
+        className="cart-count"
+      >
         10
       </CartCount__Dot>
     </CSSTransition>
@@ -44,7 +46,9 @@ exports[`<CartCount/> updates via props 1`] = `
       }
       unmountOnExit={true}
     >
-      <CartCount__Dot>
+      <CartCount__Dot
+        className="cart-count"
+      >
         50
       </CartCount__Dot>
     </CSSTransition>

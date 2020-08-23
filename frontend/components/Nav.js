@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { withRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import { Mutation } from 'react-apollo';
 import { TOGGLE_CART_MUTATION } from './Cart';
 import NavStyles from './styles/NavStyles';
@@ -8,7 +8,7 @@ import CartCount from './CartCount';
 import SignOut from './SignOut';
 
 
-function Nav({ router }) {
+function Nav() {
   return (
   <User>
     {({ data }) => {
@@ -16,15 +16,15 @@ function Nav({ router }) {
       return (
       <NavStyles data-test="nav">
         <Link href="/items">
-          <a className={router.pathname === "/items" ? "active" : ""}>Shop</a>
+          <a >Shop</a>
         </Link>
         {me && (
           <>
             <Link href="/sell">
-                <a className={router.pathname === "/sell" ? "active" : ""}>Sell</a>
+                <a >Sell</a>
             </Link>
             <Link href="/orders">
-              <a className={router.pathname === "/orders" ? "active" : ""}>Orders</a>
+              <a >Orders</a>
             </Link>
             {/* <Link href="/me">
               <a>Account</a>
@@ -46,7 +46,7 @@ function Nav({ router }) {
         )}
         {!me && (
           <Link href="/signup">
-            <a className={router.pathname === "/signup" ? "active" : ""}>Sign In</a>
+            <a>Sign In</a>
           </Link>
 
         )}
@@ -56,4 +56,4 @@ function Nav({ router }) {
   </User>
 )};
 
-export default withRouter(Nav);
+export default Nav;

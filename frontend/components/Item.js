@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import styled from 'styled-components';
 import ItemStyles from './styles/ItemStyles';
 import formatMoney from '../lib/formatMoney';
 import DeleteItem from './DeleteItem';
 import AddToCart from './AddToCart';
 import User from './User';
-import StyledPopup from './styles/PopUpStyle'
+import Popup from "reactjs-popup";
+
+const StyledPopup = styled(Popup)`
+  &-content {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+    hr {
+      margin: 3rem;
+      height: 3px;
+      border: 0;
+      background-color: ${props => props.theme.offWhite};
+      box-shadow: ${props => props.theme.lgemboss};
+    }
+  }
+`
 
 
 class Item extends Component {
@@ -33,15 +48,17 @@ class Item extends Component {
                 {!me ? 
                   <div className="buttonList">
                     <StyledPopup
-                      trigger={<button className="button">Add To Cart 🛒</button>}
+                      trigger={<button className="button"> Add To Cart 🛒 </button>}
                       modal
                       closeOnDocumentClick
                     >
+                      <span>
                         <hr></hr>
                         <h2> 💸 Please sign in to buy or sell 💸 </h2>
                         <Link href="/signup">
                           <a className="signup">Sign In</a>
                         </Link>
+                      </span>
                     </StyledPopup>
                   </div>
                   :                 
