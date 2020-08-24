@@ -154,6 +154,9 @@ function (_Document) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("html", {
+        style: {
+          background: "#F6F6F6"
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14

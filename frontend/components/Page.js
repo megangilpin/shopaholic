@@ -48,11 +48,13 @@ injectGlobal `
     font-variant: normal; 
     box-sizing: border-box;
     font-size: 10px;
+    background: ${props => props.theme.offWhite};
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
   body {
+    background: ${props => props.theme.offWhite};
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     padding:0;
     margin: 0;

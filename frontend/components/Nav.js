@@ -22,10 +22,10 @@ function Nav() {
           </div>
         {me && (
           <>
-            <LinkElement href="/sell">
+            <LinkElement href="/sell" activeClassName="active">
                 <a >Sell</a>
             </LinkElement>
-            <LinkElement href="/orders">
+            <LinkElement href="/orders" activeClassName="active">
               <a >Orders</a>
             </LinkElement>
             {/* <Link href="/me">
@@ -47,9 +47,9 @@ function Nav() {
           </>
         )}
         {!me && (
-          <Link href="/signup">
+          <LinkElement href="/signup" activeClassName="active">
             <a>Sign In</a>
-          </Link>
+          </LinkElement>
 
         )}
       </NavStyles>
