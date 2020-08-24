@@ -92,7 +92,6 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365, //1 year cookie
-      SameSite: "None",
       Secure: true
     })
     // return the user to the browser
