@@ -1,12 +1,13 @@
 import { mount } from 'enzyme';
 import wait from 'waait';
 import toJSON from 'enzyme-to-json';
+import NProgress from 'nprogress';
+import Router from 'next/router';
 import { MockedProvider } from 'react-apollo/test-utils';
+import { ApolloConsumer } from 'react-apollo';
 import TakeMyMoney, { CREATE_ORDER_MUTATION } from '../components/TakeMyMoney';
 import { CURRENT_USER_QUERY } from '../components/User';
 import { fakeUser, fakeCartItem } from '../lib/testUtils';
-import Router from 'next/router';
-import NProgress from 'nprogress';
 
 
 Router.router = { push() {} };
@@ -47,7 +48,6 @@ describe('<TakeMyMoney/>', () => {
       </MockedProvider>
     );
     const component = wrapper.find('TakeMyMoney').instance();
-    console.log(component)
       // manually call that onToken
       component.onToken({ id: 'abc123'}, createOrderMock);
       expect(createOrderMock).toHaveBeenCalled();

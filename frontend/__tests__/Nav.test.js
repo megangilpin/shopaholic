@@ -3,10 +3,10 @@ import { mount } from 'enzyme';
 import wait from 'waait';
 import toJSON from 'enzyme-to-json';
 import Nav from '../components/Nav';
-import { withRouter } from 'next/router'
 import { CURRENT_USER_QUERY } from '../components/User';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { fakeUser, fakeCartItem } from '../lib/testUtils';
+
 
 const notSignedInMocks = [
   {
@@ -36,6 +36,11 @@ const signedInMocksWithCartItems = [
   },
 ];
 
+jest.mock('../components/LinkElement', () => () => 'Link Name');
+
+
+
+ 
 describe('<Nav/>', () => {
   it('renders a minimal nav when signed out', async () => {
     const wrapper = mount(

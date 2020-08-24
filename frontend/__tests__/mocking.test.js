@@ -19,7 +19,7 @@ Person.prototype.fetchFavFoods = function() {
       const me = new Person ('Wes', ['pizza', 'burgs']);
       // mock the favFoods Function
       const favFoods = await me.fetchFavFoods();
-      console.log(favFoods);
+      // console.log(favFoods);
       expect(favFoods).toContain('pizza');
     })
   })
