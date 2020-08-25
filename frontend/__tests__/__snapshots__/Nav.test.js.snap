@@ -13,16 +13,12 @@ exports[`<Nav/> renders a minimal nav when signed out 1`] = `
       Link Name
     </Component>
   </div>
-  <Link
+  <Component
+    activeClassName="active"
     href="/signup"
   >
-    <a
-      href="/signup"
-      onClick={[Function]}
-    >
-      Sign In
-    </a>
-  </Link>
+    Link Name
+  </Component>
 </ul>
 `;
 

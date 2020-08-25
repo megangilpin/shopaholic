@@ -95,6 +95,7 @@ const Mutations = {
       SameSite: "None",
       Secure: true
     })
+    
     // return the user to the browser
     return user;
   },

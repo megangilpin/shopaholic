@@ -189,7 +189,7 @@ var Cart = function Cart() {
         lineNumber: 54
       },
       __self: this
-    }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_11__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_10__["default"])(me.cart))), me.cart.length && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_11__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_10__["default"])(me.cart))), me.cart.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 56
@@ -1881,10 +1881,8 @@ __webpack_require__.r(__webpack_exports__);
 var Supreme = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
   displayName: "Supreme",
   componentId: "xv30qb-0"
-})(["display:inline-block;margin:0;text-transform:uppercase;font-size:5rem;font-weight:500;letter-spacing:0.1em;color:", ";text-shadow:", ";"], function (props) {
+})(["display:inline-block;margin:0;text-transform:uppercase;font-size:5rem;font-weight:500;letter-spacing:0.1em;color:", ";text-shadow:-1px -1px 1px white,1px 1px 1px #a099b2;"], function (props) {
   return props.theme.lightgrey;
-}, function (props) {
-  return props.theme.lgemboss;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Supreme);
 

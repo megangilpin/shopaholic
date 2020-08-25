@@ -23,14 +23,16 @@ const Item = styled.div`
       font-size: 2.8rem;
       font-weight: 400;
       letter-spacing: .5rem;
-      text-shadow: -1px -1px 1px rgba(255,255,255), 1px 1px 2px #b3b3b3;
+      text-shadow: -1px -1px 1px white, 1px 1px 1px #a099b2;
       border: 0;
       transition: all .15s;
+    }
+    .card_content {
+      margin-left: 1rem;
     }
     p {
       line-height: 1.2;
       margin: 0;
-      margin-left: 1rem;
       padding: 0 0 5px 5px;
       color: ${props => props.theme.lightPurple};
       font-size: 1.8rem;

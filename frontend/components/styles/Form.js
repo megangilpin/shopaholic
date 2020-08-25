@@ -84,7 +84,7 @@ const Form = styled.form`
       box-shadow: none;
       background: ${props => props.theme.offWhite};
       color: ${props => props.theme.lightgrey};
-      text-shadow: ${props => props.theme.lgemboss};
+      text-shadow: -1px -1px 1px white, 1px 1px 1px #a099b2;
       font-weight: 400;
       // font-size: 2.5rem;
     }

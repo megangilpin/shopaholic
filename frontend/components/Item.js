@@ -43,8 +43,10 @@ class Item extends Component {
                   >
                   <a className="card_title">{item.title}</a>
                 </Link>
-                <p className="card_money">{formatMoney(item.price)}</p>
-                <p className="card_description">{item.description}</p>
+                <div className="card_content">
+                  <p className="card_money">{item.price}</p>
+                  <p className="card_description">{item.description}</p>
+                </div>
                 {!me ? 
                   <div className="buttonList">
                     <StyledPopup
