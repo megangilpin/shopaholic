@@ -93,7 +93,7 @@ const Mutations = {
       HttpOnly: "true",
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      SameSite: "None",
+      SameSite: "Strict",
       Secure: "true",
     })
     
