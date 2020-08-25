@@ -90,11 +90,11 @@ const Mutations = {
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
     // we set teh jwt as a cookie on the response
     ctx.response.cookie('token', token, {
-      HttpOnly: true,
+      HttpOnly: "true",
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
       SameSite: "None",
-      Secure: true,
+      Secure: "true",
     })
     
     // return the user to the browser
