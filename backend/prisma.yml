@@ -1,6 +1,6 @@
   #endpoint: ${env:PRISMA_ENDPOINT}
 #endpoint: https://eu1.prisma.sh/megan-gilpin-40134b/shopaholic/dve
-endpoint: https://shopaholic-prod-5928856c58.herokuapp.com/shopaholic-prod/prod
+endpoint: https://shop-prod-f6cc12f1d0.herokuapp.com/shop-prod/prod
 datamodel: datamodel.graphql
 secret: ${env:PRISMA_SECRET}
 hooks:
