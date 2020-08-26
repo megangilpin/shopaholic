@@ -93,10 +93,10 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      SameSite: "None",
       Secure: true,
+      SameSite: "None",
     })
-    
+    console.log()
     // return the user to the browser
     return user;
   },
@@ -119,8 +119,8 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      SameSite: "None",
       Secure: true,
+      SameSite: "None",
     });
     // 5. Return the user
     return user;
@@ -194,8 +194,8 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      SameSite: "None",
       Secure: true,
+      SameSite: "None",
     });
     // 8. return the new user
     return updatedUser;
