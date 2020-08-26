@@ -2008,7 +2008,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 // This is client side config only - don't put anything in here that shouldn't be public!
 var endpoint = "http://localhost:4444";
-var prodEndpoint = "https://shopaholic-yoga-prod.herokuapp.com/";
+var prodEndpoint = "https://shopaholic-yoa-prod.herokuapp.com/";
 var perPage = 4;
 
 /***/ }),
@@ -2087,14 +2087,14 @@ function createClient(_ref) {
         headers: headers
       });
     },
-    //local data
+    // local data
     clientState: {
       resolvers: {
         Mutation: {
           toggleCart: function toggleCart(_, variables, _ref2) {
             var cache = _ref2.cache;
 
-            // read the cartOpen value form the cache
+            // read the cartOpen value from the cache
             var _cache$readQuery = cache.readQuery({
               query: _components_Cart__WEBPACK_IMPORTED_MODULE_3__["LOCAL_STATE_QUERY"]
             }),

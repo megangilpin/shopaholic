@@ -986,7 +986,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 // This is client side config only - don't put anything in here that shouldn't be public!
 var endpoint = "http://localhost:4444";
-var prodEndpoint = "https://shopaholic-yoga-prod.herokuapp.com/";
+var prodEndpoint = "https://shopaholic-yoa-prod.herokuapp.com/";
 var perPage = 4;
 
 /***/ }),
@@ -30879,7 +30879,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/items.js ***!
   \******************************/
@@ -30904,5 +30904,5 @@ module.exports = dll_38509d83c42d284d9f51;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=items.js.map

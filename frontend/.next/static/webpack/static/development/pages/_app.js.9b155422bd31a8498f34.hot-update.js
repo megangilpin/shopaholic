@@ -31,14 +31,14 @@ function createClient(_ref) {
         headers: headers
       });
     },
-    //local data
+    // local data
     clientState: {
       resolvers: {
         Mutation: {
           toggleCart: function toggleCart(_, variables, _ref2) {
             var cache = _ref2.cache;
 
-            // read the cartOpen value form the cache
+            // read the cartOpen value from the cache
             var _cache$readQuery = cache.readQuery({
               query: _components_Cart__WEBPACK_IMPORTED_MODULE_3__["LOCAL_STATE_QUERY"]
             }),
@@ -67,4 +67,4 @@ function createClient(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=_app.js.31b241bd4cf005de1d55.hot-update.js.map
+//# sourceMappingURL=_app.js.9b155422bd31a8498f34.hot-update.js.map

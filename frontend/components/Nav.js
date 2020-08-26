@@ -50,7 +50,6 @@ function Nav() {
           <LinkElement href="/signup" activeClassName="active">
             <a>Sign In</a>
           </LinkElement>
-
         )}
       </NavStyles>
     )
