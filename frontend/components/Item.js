@@ -44,7 +44,7 @@ class Item extends Component {
                   <a className="card_title">{item.title}</a>
                 </Link>
                 <div className="card_content">
-                  <p className="card_money">{item.price}</p>
+                  <p className="card_money">{formatMoney(item.price)}</p>
                   <p className="card_description">{item.description}</p>
                 </div>
                 {!me ? 
