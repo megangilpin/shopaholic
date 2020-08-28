@@ -95,8 +95,8 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      // secure: true,
-      // sameSite: "None",
+      secure: true,
+      sameSite: "None",
     })
 
     // return the user to the browser
@@ -121,16 +121,16 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      // secure: true,
-      // sameSite: "None",
+      secure: true,
+      sameSite: "None",
     });
     // 5. Return the user
     return user;
   },
   async signout(parent, args, ctx, info) {
     ctx.response.clearCookie('token', {
-      // secure: true,
-      // sameSite: "None",
+      secure: true,
+      sameSite: "None",
     });
     return { message: 'Goodbye!'};
   },  
@@ -199,8 +199,8 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      // secure: true,
-      // sameSite: "None",
+      secure: true,
+      sameSite: "None",
     });
     // 8. return the new user
     return updatedUser;
