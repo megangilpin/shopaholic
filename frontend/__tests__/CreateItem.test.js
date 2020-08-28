@@ -60,11 +60,12 @@ describe('<CreateItem/>', () => {
       .simulate('change', { target: { value: 'This is a really nice item', name: 'description'} });
     expect(wrapper.find('CreateItem'). instance().state).toMatchObject({
       title: 'Testing',
-      price: 50000,
+      price: 5000000,
+      money: 50000,
       description: 'This is a really nice item'
     }) 
   })
-  it('creates an itme when teh form is submitted', async () => {
+  it('creates an item when the form is submitted', async () => {
     const item = fakeItem();
     const mocks = [{
       request: {
@@ -72,9 +73,10 @@ describe('<CreateItem/>', () => {
         variables: {
           title: item.title,
           description: item.description,
-          image: '',
-          largeImage: '',
+          image: "",
+          largeImage: "",
           price: item.price,
+          money: item.money,
         },
       },
       result: {
@@ -99,7 +101,7 @@ describe('<CreateItem/>', () => {
     .simulate('change', { target: { value: item.title, name: 'title'}});
     wrapper
       .find('#price')
-      .simulate('change', { target: { value: item.price, name: 'price', type: 'number'}});
+      .simulate('change', { target: { value: item.money, name: 'price', type: 'number'}});
     wrapper
       .find('#description')
       .simulate('change', { target: { value: item.description, name: 'description'} });

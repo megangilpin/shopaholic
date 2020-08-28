@@ -22,7 +22,8 @@ const CREATE_ORDER_MUTATION = gql`
 `;
 
 function totalItems(cart) {
-  return cart.reduce((tally, cartItem) => tally + cartItem.quantity, 0);
+  let amount = cart.reduce((tally, cartItem) => tally + cartItem.quantity, 0)
+  return amount;
 }
 
 class TakeMyMoney extends React.Component {
@@ -57,7 +58,7 @@ class TakeMyMoney extends React.Component {
                   name="Sick Fits"
                   description={`Order of ${totalItems(me.cart)} items!`}
                   image={me.cart.length && me.cart[0].item && me.cart[0].item.image}
-                  stripeKey="pk_test_Vtknn6vSdcZWSG2JWvEiWSqC"
+                  stripeKey="pk_test_ZhGgeblNdS34Ouo88jJGiyYp00RQNqd8tC"
                   currency="USD"
                   email={me.email}
                   token={res => this.onToken(res, createOrder)}

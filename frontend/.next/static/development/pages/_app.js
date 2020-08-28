@@ -1529,9 +1529,10 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var CREATE_ORDER_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_6___default()(_templateObject());
 
 function totalItems(cart) {
-  return cart.reduce(function (tally, cartItem) {
+  var amount = cart.reduce(function (tally, cartItem) {
     return tally + cartItem.quantity;
   }, 0);
+  return amount;
 }
 
 var TakeMyMoney =
@@ -1607,7 +1608,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 47
         },
         __self: this
       }, function (_ref2) {
@@ -1621,7 +1622,7 @@ function (_React$Component) {
           }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 50
+            lineNumber: 51
           },
           __self: this
         }, function (createOrder) {
@@ -1630,7 +1631,7 @@ function (_React$Component) {
             name: "Sick Fits",
             description: "Order of ".concat(totalItems(me.cart), " items!"),
             image: me.cart.length && me.cart[0].item && me.cart[0].item.image,
-            stripeKey: "pk_test_Vtknn6vSdcZWSG2JWvEiWSqC",
+            stripeKey: "pk_test_ZhGgeblNdS34Ouo88jJGiyYp00RQNqd8tC",
             currency: "USD",
             email: me.email,
             token: function token(res) {
@@ -1638,7 +1639,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 55
+              lineNumber: 56
             },
             __self: this
           }, _this2.props.children);
@@ -1881,8 +1882,10 @@ __webpack_require__.r(__webpack_exports__);
 var Supreme = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
   displayName: "Supreme",
   componentId: "xv30qb-0"
-})(["display:inline-block;margin:0;text-transform:uppercase;font-size:5rem;font-weight:500;letter-spacing:0.1em;color:", ";text-shadow:-1px -1px 1px white,1px 1px 1px #a099b2;"], function (props) {
+})(["display:inline-block;margin:0;text-transform:uppercase;font-size:5rem;font-weight:500;letter-spacing:0.1em;color:", ";text-shadow:", ";"], function (props) {
   return props.theme.lightgrey;
+}, function (props) {
+  return props.theme.lgemboss;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Supreme);
 
@@ -1920,7 +1923,8 @@ __webpack_require__.r(__webpack_exports__);
 function calcTotalPrice(cart) {
   return cart.reduce(function (tally, cartItem) {
     if (!cartItem.item) return tally;
-    return tally + cartItem.quantity * cartItem.item.price;
+    var amount = cartItem.item.price;
+    return tally + cartItem.quantity * amount;
   }, 0);
 }
 

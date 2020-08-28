@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import Router from 'next/router';
 import Form from './styles/Form';
 import Error from './ErrorMessage';
+import formatMoney from '../lib/formatMoney'
 
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
@@ -32,11 +33,23 @@ class CreateItem extends Component {
     image: '',
     largeImage: '',
     price: '',
+    money: '',
   };
+
+
   handleChange = e => {
     const { name, type, value } = e.target;
-    const val = type === 'number' ? parseFloat(value) : value;
-    this.setState({ [name]: val });
+    if(type === 'number') {
+      let val = parseFloat(value)
+      if(val.toFixed(2) != val){
+        return alert("Please enter a dollar amount to the nearest cent")
+      }
+      let price = val * 100;
+      let money = val
+      this.setState({ price, money })
+    } else {
+      this.setState({ [name]: value });
+    }
   };
 
   uploadFile = async e => {
@@ -63,10 +76,6 @@ class CreateItem extends Component {
             onSubmit={async e => {
               // Stop the form from submitting
               e.preventDefault();
-              const cent = this.state.price;
-              this.setState({
-                price: cent*100,
-              })
               // call the mutation
               const res = await createItem();
               // change them to the single item page
@@ -114,9 +123,9 @@ class CreateItem extends Component {
                   name="price"
                   placeholder="Price"
                   required
-                  value={this.state.price}
+                  value={this.state.money}
                   onChange={this.handleChange}
-                />
+              />
               </label>
 
               <label htmlFor="description">

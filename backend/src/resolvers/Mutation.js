@@ -12,6 +12,8 @@ const Mutations = {
     if(!ctx.request.userId) {
       throw new Error('You must be logged in to do that!');
     }
+    let product = {...args}
+    delete product.money
     const item = await ctx.db.mutation.createItem({
       data: {
         // How to create a relationship between the item and the user
@@ -20,10 +22,10 @@ const Mutations = {
             id: ctx.request.userId,
           },
         },
-        ...args
+        ...product
       }
     }, info);
-
+    console.log(item)
     return item; 
   },
   async updateItem(parent, args, ctx, info) {
@@ -318,13 +320,15 @@ const Mutations = {
       (tally, cartItem) => tally + cartItem.item.price * cartItem.quantity,
       0
     );
+
     // console.log(`Going to charge for a total of ${amount}`);
     // 3. Create the stripe charge (turn token into $$$)
     const charge = await stripe.charges.create({
       amount,
-      currency: 'USD',
+      currency: 'usd',
       source: args.token,
     });
+    console.log(charge)
     // 4. Convert the CartItems to OrderItems
     const orderItems = user.cart.map(cartItem => {
       const orderItem = {
@@ -335,7 +339,6 @@ const Mutations = {
       delete orderItem.id;
       return orderItem;
     });
-
     // 5. create the Order
     const order = await ctx.db.mutation.createOrder({
       data: {

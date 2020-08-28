@@ -8,7 +8,7 @@ const Supreme = styled.h2`
   font-weight: 500;
   letter-spacing: 0.1em;
   color: ${props => props.theme.lightgrey};
-  text-shadow: -1px -1px 1px white, 1px 1px 1px #a099b2;
+  text-shadow: ${props => props.theme.lgemboss};
 `;
 
 export default Supreme;
