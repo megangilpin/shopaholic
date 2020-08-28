@@ -29,6 +29,7 @@ const Item = styled.div`
     }
     .card_content {
       margin-left: 1rem;
+      margin-right: 1rem;
     }
     p {
       line-height: 1.2;

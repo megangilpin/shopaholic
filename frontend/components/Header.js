@@ -34,9 +34,6 @@ const Logo = styled.h1`
     text-transform: uppercase;
     text-decoration: none;
     transition: all .3s;
-    @media (max-width: 700px) {
-      font-size: 5rem;
-    }
   }
   a:hover {
     color:  ${props => props.theme.lightPurple};
@@ -53,9 +50,16 @@ const Logo = styled.h1`
       font-size: 8rem;
       padding: 0.5rem 1rem;
     }
+    @media (max-width: 700px) {
+      font-size: 5rem;
+      a {
+        font-size: 6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
   }
-`;
-
+  `;
+  
 const StyledHeader = styled.header`
   .bar {
     // border-bottom: 10px solid ${props => props.theme.black};

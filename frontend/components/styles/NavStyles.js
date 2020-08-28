@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const NavStyles = styled.ul`
-  margin: 0;
+  margin: 0 0 0 1rem ;
   padding: 0;
   font-size: 2rem;
   display: flex;
@@ -58,6 +58,9 @@ const NavStyles = styled.ul`
       1px 1px 5px rgba(0, 0, 0, 0.1);
     }
   }
+  button:last-child {
+    margin-right: 3rem;
+  }
   a.active {
     // color: ${props => props.theme.lightgrey};
     // text-shadow: ${props => props.theme.lgemboss};
@@ -69,6 +72,9 @@ const NavStyles = styled.ul`
   @media (max-width: 1300px) {
     width: 100%;
     justify-content: center;
+    button:last-child {
+      margin-right: 1rem;
+    }
   }
 `;
 

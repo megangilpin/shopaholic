@@ -535,7 +535,7 @@ next_router__WEBPACK_IMPORTED_MODULE_2___default.a.onRouteChangeError = function
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
   displayName: "Header__Logo",
   componentId: "sc-2cpreo-0"
-})(["font-size:4rem;margin-left:2rem;position:relative;z-index:2;a{padding:2rem;background:", ";color:", ";text-shadow:", ";font-size:7rem;font-weight:400;letter-spacing:0.1em;border:0;border-radius:10px;text-transform:uppercase;text-decoration:none;transition:all .3s;@media (max-width:700px){font-size:5rem;}}a:hover{color:", ";box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}@media (max-width:1300px){margin:0;text-align:center;a{font-size:8rem;padding:0.5rem 1rem;}}"], function (props) {
+})(["font-size:4rem;margin-left:2rem;position:relative;z-index:2;a{padding:2rem;background:", ";color:", ";text-shadow:", ";font-size:7rem;font-weight:400;letter-spacing:0.1em;border:0;border-radius:10px;text-transform:uppercase;text-decoration:none;transition:all .3s;}a:hover{color:", ";box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}@media (max-width:1300px){margin:0;text-align:center;a{font-size:8rem;padding:0.5rem 1rem;}@media (max-width:700px){font-size:5rem;a{font-size:6rem;padding:0.5rem 1rem;}}}"], function (props) {
   return props.theme.offWhite;
 }, function (props) {
   return props.theme.lightgrey;
@@ -557,58 +557,58 @@ var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 88
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 91
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 92
     },
     __self: this
   }, "shopaholic"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 95
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "sub-bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 99
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 101
     },
     __self: this
   }));
@@ -1938,7 +1938,7 @@ __webpack_require__.r(__webpack_exports__);
 var NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul.withConfig({
   displayName: "NavStyles",
   componentId: "sc-11c0d2g-0"
-})(["margin:0;padding:0;font-size:2rem;display:flex;justify-self:end;align-items:center;a,button{height:7rem;display:flex;align-items:center;margin:1rem;padding:1.7rem 2rem;text-transform:uppercase;letter-spacing:.2rem;font-weight:600;font-size:.9em;background:none;border:0;border-radius:10px;cursor:pointer;color:", ";transition:all .3s;@media (max-width:700px){font-size:12px;padding:0 10px;}&:hover{box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);.cart-count{font-size:2.5rem;}}&:active{border:none;box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}}a.active{box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}@media (max-width:1300px){width:100%;justify-content:center;}"], function (props) {
+})(["margin:0 0 0 1rem;padding:0;font-size:2rem;display:flex;justify-self:end;align-items:center;a,button{height:7rem;display:flex;align-items:center;margin:1rem;padding:1.7rem 2rem;text-transform:uppercase;letter-spacing:.2rem;font-weight:600;font-size:.9em;background:none;border:0;border-radius:10px;cursor:pointer;color:", ";transition:all .3s;@media (max-width:700px){font-size:12px;padding:0 10px;}&:hover{box-shadow:-6px -6px 10px white,1px 1px 5px rgba(0,0,0,0.1);-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);.cart-count{font-size:2.5rem;}}&:active{border:none;box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}}button:last-child{margin-right:3rem;}a.active{box-shadow:inset -6px -6px 10px white,inset 1px 1px 5px rgba(0,0,0,0.1);}@media (max-width:1300px){width:100%;justify-content:center;button:last-child{margin-right:1rem;}}"], function (props) {
   return props.theme.grey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (NavStyles);
