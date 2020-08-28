@@ -33,8 +33,15 @@ class Item extends Component {
           const me = data ? data.me : null
           return (
             <ItemStyles>
-              <div className="card">
-                {item.image && <img src={item.image} alt={item.title} />}
+              <div className="card"><Link
+                  href={{
+                    pathname: '/item',
+                    query: { id: item.id },
+                  }}
+                  >
+                  <a>{item.image && <img src={item.image} alt={item.title} />}</a>
+                </Link>
+                
                 <Link
                   href={{
                     pathname: '/item',

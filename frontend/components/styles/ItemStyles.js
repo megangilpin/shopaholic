@@ -7,14 +7,14 @@ const Item = styled.div`
   text-align: left;
   .card {
     border-radius: 10px;
-    transition: all .15s;
+    transition: all .15s ease-in-out;
     overflow: hidden;
     line-height: 1.5;
     img {
       width: 100%;
       height: 400px;
       object-fit: cover;
-      transition: all .15s;
+      transition: all .15s ease-in-out;
     }
     .card_title {
       margin-left: 1rem;
@@ -25,7 +25,7 @@ const Item = styled.div`
       letter-spacing: .5rem;
       text-shadow: -1px -1px 1px white, 1px 1px 1px #a099b2;
       border: 0;
-      transition: all .15s;
+      transition: all .15s ease-in-out;
     }
     .card_content {
       margin-left: 1rem;
@@ -39,7 +39,7 @@ const Item = styled.div`
       font-size: 1.8rem;
       font-weight: 500;
       text-align: left;
-      transition: all .15s;
+      transition: all .15s ease-in-out;
     }
     p.text {
       color: ${props => props.theme.offWhite};
@@ -105,6 +105,7 @@ const Item = styled.div`
         -webkit-transform: scale(.9);
         -ms-transform: scale(.9);
         transform: scale(.9);
+        object-fit: contain;
       }
       .card_title {
         color:  ${props => props.theme.darkGrey};
