@@ -8,7 +8,7 @@ const stripe = require('../stripe');
 
 const Mutations = {
   async createItem(parent, args, ctx, info) {
-    // TODO: Check if they are logged in
+    // Check if they are logged in
     if(!ctx.request.userId) {
       throw new Error('You must be logged in to do that!');
     }
@@ -25,7 +25,7 @@ const Mutations = {
         ...product
       }
     }, info);
-    console.log(item)
+
     return item; 
   },
   async updateItem(parent, args, ctx, info) {
@@ -95,10 +95,10 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      secure: true,
-      sameSite: "None",
+      // secure: true,
+      // sameSite: "None",
     })
-    console.log()
+
     // return the user to the browser
     return user;
   },
@@ -121,16 +121,16 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      secure: true,
-      sameSite: "None",
+      // secure: true,
+      // sameSite: "None",
     });
     // 5. Return the user
     return user;
   },
   async signout(parent, args, ctx, info) {
     ctx.response.clearCookie('token', {
-      secure: true,
-      sameSite: "None",
+      // secure: true,
+      // sameSite: "None",
     });
     return { message: 'Goodbye!'};
   },  
@@ -199,8 +199,8 @@ const Mutations = {
       httpOnly: true,
       //1 year cookie
       maxAge: 1000 * 60 * 60 * 24 * 365,
-      secure: true,
-      sameSite: "None",
+      // secure: true,
+      // sameSite: "None",
     });
     // 8. return the new user
     return updatedUser;
@@ -328,7 +328,7 @@ const Mutations = {
       currency: 'usd',
       source: args.token,
     });
-    console.log(charge)
+
     // 4. Convert the CartItems to OrderItems
     const orderItems = user.cart.map(cartItem => {
       const orderItem = {

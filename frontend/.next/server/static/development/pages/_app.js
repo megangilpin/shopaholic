@@ -2050,7 +2050,7 @@ __webpack_require__.r(__webpack_exports__);
     style: 'currency',
     currency: 'USD',
     minimumFractionDigits: 2
-  }; // if its a whole, dollar amount, leave off the .00
+  }; // if its a whole dollar amount, leave off the .00
 
   if (amount % 100 === 0) options.minimumFractionDigits = 0;
   var formatter = new Intl.NumberFormat('en-US', options);
